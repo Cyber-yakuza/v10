@@ -63,7 +63,7 @@ cmd(menuCommand, async (client, message, args, { from, prefix, pushname, reply }
 
 ╭═════════════════●●►
 │◦ 🥷 𝗕𝗢𝗧 𝗡𝗔𝗠𝗘 : *𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢*
-│◦ 🥷 𝗢𝗪𝗡𝗘𝗥 𝗡𝗨𝗠𝗕𝗘𝗥 :  07740805/0766934612
+│◦ 🥷 𝗢𝗪𝗡𝗘𝗥 𝗡𝗨𝗠𝗕𝗘𝗥 :  0774071805/0766934612
 │◦ 🥷 *0701469704*
 │◦ 🥷 𝗨𝗣𝗧𝗜𝗠𝗘 : ${runtime(process.uptime())}
 │◦ 🥷 𝗥𝗔𝗠 : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB
