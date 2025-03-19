@@ -59,7 +59,7 @@ cmd(menuCommand, async (client, message, args, { from, prefix, pushname, reply }
     const image = { url: imageUrl };
     const caption = `*🫣💗👋𝗛𝗘𝗟𝗟𝗢𝗪* ${pushname}
 
-> 🥷𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞 𝗡𝗘𝗘𝗢 𝗪𝗛𝗔𝗧𝗛𝗔𝗣𝗣 𝗕𝗢𝗧💀
+> 🥷𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗪𝗛𝗔𝗧𝗛𝗔𝗣𝗣 𝗕𝗢𝗧💀
 
 ╭═════════════════●●►
 │◦ 🥷 𝗕𝗢𝗧 𝗡𝗔𝗠𝗘 : *𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢*
