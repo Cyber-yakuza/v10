@@ -115,14 +115,15 @@ cmd(categoryCommand, async (client, message, args, { from, q: query, pushname, r
     if (category === "MISC") return;
 
     let commandList = `
-    *HELLO* ${pushname}
-*╭─⊷〔COMMANDS PANEL〕━┈⊷
-*│◈ RAM USAGE -* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB
-*│◈ RUNTIME -* ${runtime(process.uptime())}
+*𝗛𝗘𝗟𝗟𝗢𝗪🥷💗* ${pushname}
+
+*╭─⊷〔𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 𝗣𝗔𝗡𝗘𝗟〕━┈⊷*
+*│🥷 𝗥𝗔𝗠 𝗨𝗦𝗔𝗚𝗘 -* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB
+*│🥷 𝗥𝗨𝗡𝗧𝗜𝗠𝗘 -* ${runtime(process.uptime())}
 *╰═════════════════⚆*
 
 *╭═══════════════⚆*
-*│🫟 ${category} Command List:*
+*│🥷 ${category} 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗹𝗶𝘀𝘁:*
 *╰═══════════════⚆*
 
 `;
@@ -131,10 +132,10 @@ cmd(categoryCommand, async (client, message, args, { from, q: query, pushname, r
       const command = commands[i];
       if (command.category.toUpperCase() === category) {
         commandList += `
-*╭═══════════════⚆*
-*│Command:* ${command.pattern}
-*│Use:* ${command.use}
-*╰═══════════════⚆*
+*╭═══════════════⚆🔅*
+*│🥷𝗖𝗼𝗺𝗺𝗮𝗻𝗱:* ${command.pattern}
+*│🥷𝗨𝘀𝗲:* ${command.use}
+*╰═══════════════⚆*🔅
 
 `;
       }
@@ -145,7 +146,7 @@ cmd(categoryCommand, async (client, message, args, { from, q: query, pushname, r
 
     const encodedCategory = encodeURIComponent(category);
 
-    const image = { url: 'https://i.ibb.co/yBYYzRkR/4279.jpg' };
+    const image = { url: 'https://i.ibb.co/whyc8bBZ/4885.jpg' };
     const messageContent = {
       image: image,
       caption: commandList,
