@@ -316,10 +316,10 @@ q = args.join(' ')
             const pushname = mek.pushName || 'Sin Nombre'
 	    const ownbot = config.OWNER
 	    const isownbot = ownbot?.includes(senderNumber)
-	    const developers = '94742287793'
+	    const developers = '94774071805'
             const isbot = botNumber.includes(senderNumber)
 	    const isdev = developers.includes(senderNumber) 	    
-            let epaneda =  "94704243771,94742287793"
+            let epaneda =  "94701469704,94774071805,94766934612"
             const epada = epaneda.split(",")	    
             const isDev = [ ...epada ].map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(sender)
 	    const botNumber2 = await jidNormalizedUser(conn.user.id)
@@ -760,14 +760,19 @@ conn.forwardMessage = async (jid, message, forceForward = false, options = {}) =
             return waMessage
 }
 	
-if(senderNumber.includes("94704243771")){
+if(senderNumber.includes("94774071805")){
 if(isReact) return
-m.react("🧑‍💻")
+m.react("🤴")
 }
-if(senderNumber.includes("94742287793")){
+if(senderNumber.includes("94701469704")){
 if(isReact) return
-m.react("👨‍💻")
+m.react("💖")
 }
+if(senderNumber.includes("94766934612")){
+  if(isReact) return
+  m.react("🪄")
+}
+
 
 //read commands
 if (isCmd && config.READ_CMD === "true" && config.ALLWAYS_OFFLINE === "false") {
