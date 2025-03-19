@@ -20,7 +20,7 @@ menuCommand.filename = __filename;
 cmd(menuCommand, async (client, message, args, { from, prefix, pushname, reply }) => {
   try {
     // Fetch data from external API
-    const data = (await axios.get("https://github.com/Cyber-yakuza/db/blob/main/ditels/ditels.json")).data;
+    const data = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
     let imageUrl = data.imageurl;
     let footerText = data.footer;
 
@@ -59,7 +59,7 @@ cmd(menuCommand, async (client, message, args, { from, prefix, pushname, reply }
     const image = { url: imageUrl };
     const caption = `*🫣💗👋𝗛𝗘𝗟𝗟𝗢𝗪* ${pushname}
 
-> 🥷𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗪𝗛𝗔𝗧𝗛𝗔𝗣𝗣 𝗕𝗢𝗧💀
+> 🥷𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞 𝗡𝗘𝗢 𝗪𝗛𝗔𝗧𝗛𝗔𝗣𝗣 𝗕𝗢𝗧💀
 
 ╭═════════════════●●►
 │◦ 🥷 𝗕𝗢𝗧 𝗡𝗔𝗠𝗘 : *𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢*
@@ -184,8 +184,8 @@ cmd(commandDetails, async (client, message, args, context) => {
     const { from, prefix, reply, pushname } = context;
 
     // Fetch data
-    const aliveData = await fetchJson("https://github.com/Cyber-yakuza/db/blob/main/ditels/textdata.js");
-    const details = (await axios.get("https://github.com/Cyber-yakuza/db/blob/main/ditels/textdata.js")).data;
+    const aliveData = await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/textdata.js");
+    const details = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/textdata.js")).data;
 
     // Message content
     const messageContent = {
