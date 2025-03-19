@@ -184,8 +184,8 @@ cmd(commandDetails, async (client, message, args, context) => {
     const { from, prefix, reply, pushname } = context;
 
     // Fetch data
-    const aliveData = await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/textdata.js");
-    const details = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/textdata.js")).data;
+    const aliveData = await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/textdata.js");
+    const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/textdata.js")).data;
 
     // Message content
     const messageContent = {
