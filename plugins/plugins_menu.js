@@ -57,19 +57,21 @@ cmd(menuCommand, async (client, message, args, { from, prefix, pushname, reply }
 
     // Prepare image and caption
     const image = { url: imageUrl };
-    const caption = `
-😘 *HELLOW* ${pushname}
-> 🤖 *WELCOME TO MALAKA-MD* 🤖
+    const caption = `*🫣💗👋𝗛𝗘𝗟𝗟𝗢𝗪* ${pushname}
+
+> 🥷𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗗𝗔𝗥𝗞 𝗡𝗘𝗘𝗢 𝗪𝗛𝗔𝗧𝗛𝗔𝗣𝗣 𝗕𝗢𝗧💀
 
 ╭═════════════════●●►
-│◦ 🫟 BOT NAME : *MALAKA-MD*
-│◦ 👤 OWNER NAME : *MALAKA*
-│◦ 🚀 OWNER NUMBER : 
-│◦ 👩‍💻 *94704243771*
-│◦ 📟 UPTIME : ${runtime(process.uptime())}
-│◦ 🫩 RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB
-│◦ 🫆 PREFIX : ${prefix}
+│◦ 🥷 𝗕𝗢𝗧 𝗡𝗔𝗠𝗘 : *𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢*
+│◦ 🥷 𝗢𝗪𝗡𝗘𝗥 𝗡𝗨𝗠𝗕𝗘𝗥 :  07740805/0766934612
+│◦ 🥷 *0701469704*
+│◦ 🥷 𝗨𝗣𝗧𝗜𝗠𝗘 : ${runtime(process.uptime())}
+│◦ 🥷 𝗥𝗔𝗠 : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB
+│◦ 🥷 𝗣𝗥𝗘𝗙𝗜𝗫 : ${prefix}
 ╰═════════════════●●►
+
+
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `;
 
     const menuMessage = {
@@ -187,11 +189,11 @@ cmd(commandDetails, async (client, message, args, context) => {
 
     // Message content
     const messageContent = {
-      caption: `👋 Hi ${pushname}, I'm alive now\n\n` +
-        `*Version:* ${aliveData.VERSION}\n` +
-        `*Runtime:* ${runtime(process.uptime())}\n` +
-        `*RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB\n` +
-        `*Platform:* ${getHostPlatform()}\n\n${aliveData.ALIVE_NEWS}`,
+      caption: `💖 Hi ${pushname}, I'm alive now\n\n` +
+        `*📟Version:* ${aliveData.VERSION}\n` +
+        `*⚙️Runtime:* ${runtime(process.uptime())}\n` +
+        `*☘️RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(os.totalmem() / 1024 / 1024)}MB\n` +
+        `*🔖Platform:* ${getHostPlatform()}\n\n${aliveData.ALIVE_NEWS}`,
       image: { url: details.mainimg },
       footer: details.footer,
       buttonText: "🔢 Reply below number",
