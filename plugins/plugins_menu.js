@@ -20,7 +20,7 @@ menuCommand.filename = __filename;
 cmd(menuCommand, async (client, message, args, { from, prefix, pushname, reply }) => {
   try {
     // Fetch data from external API
-    const data = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const data = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     let imageUrl = data.imageurl;
     let footerText = data.footer;
 
