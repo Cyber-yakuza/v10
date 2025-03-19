@@ -202,7 +202,7 @@ cmd(commandDetails, async (client, message, args, context) => {
           title: '',
           rows: [
             { title: "1", rowId: prefix + "menu", description: "COMMANDS MENU" },
-            { title: "2", rowId: prefix + "ping", description: "MALAKA-MD SPEED" }
+            { title: "2", rowId: prefix + "ping", description: "Dark-Nero SPEED" }
           ]
         }
       ]
