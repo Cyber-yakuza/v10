@@ -108,7 +108,7 @@ const categoryCommand = {
 
 cmd(categoryCommand, async (client, message, args, { from, q: query, pushname, reply }) => {
   try {
-    const data = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const data = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     let footerText = data.footer;
 
     const category = query.trim().toUpperCase();
@@ -241,7 +241,7 @@ cmd(commandrepo, async ( botInstance,message,chat,{from,quoted,body,isCmd,comman
 ) => {
   try {
     const response = await axios.get(
-      "https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json"
+      "https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json"
     );
     const repoDetails = response.data;
     let imageUrl = repoDetails.imageurl;
@@ -281,7 +281,7 @@ cmd(commandrepo, async ( botInstance,message,chat,{from,quoted,body,isCmd,comman
     await botInstance.sendMessage(from, messageContent, { quoted: message });
   } catch (error) {
     const errorResponse = await fetchJson(
-      "https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json"
+      "https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json"
     );
     const errorReaction = {
       text: "❌",
