@@ -210,7 +210,7 @@ cmd(commandDetails, async (client, message, args, context) => {
 
     // Send audio response
     await client.sendMessage(from, {
-      audio: { url: "https://github.com/MALAKA-MD-VPI/MALAKA-MD-db/blob/main/autovoice/malaka-md.mp3" },
+      audio: { url: "https://github.com/Cyber-yakuza/cmd/blob/main/voics/AUD-20250314-WA0008.mp3" },
       mimetype: "audio/mp4",
       ptt: true
     }, { quoted: message });
