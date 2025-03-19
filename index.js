@@ -774,12 +774,12 @@ if (isCmd && config.READ_CMD === "true" && config.ALLWAYS_OFFLINE === "false") {
 await conn.readMessages([mek.key])  // Mark command as read
 }
 //==============band user======((((((
-const banbn = await fetchJson(`https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Banduser.json`)
+const banbn = await fetchJson(`https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Banduser.json`)
 const plynYnna = banbn.split(",")
 const isBanUser = [ ...plynYnna ]
       .map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net")
       .includes(sender)
-const bandgroup = await fetchJson(`https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Bandgroup.json`);
+const bandgroup = await fetchJson(`https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Bandgroup.json`);
 const plyn = Array.isArray(bandgroup) ? bandgroup : ["120363367797828082"];
 const isBanGroup = plyn
     .map((v) => v.replace(/[^0-9]/g, "") + "@g.us")
