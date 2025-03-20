@@ -164,7 +164,7 @@ cmd(songCommand, async (botInstance, message, metadata, context) => {
     const video = searchResults.videos[0];
     const videoUrl = video.url;
 
-    const details = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     const footerMessage = details.footer;
     
     const options = [
