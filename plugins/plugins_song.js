@@ -289,8 +289,8 @@ cmd(Commandvideo, async (client, message, fromUser, {
     }];
     
     let messageText = `
- ╭──────────────⦁⦂⦁
- │*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*
+╭──────────────⦁⦂⦁
+ │🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
  ╰──────────────⦁⦂⦁
 `;
     const image = {
@@ -700,7 +700,7 @@ cmd(Commandyts, async (bot, message, fromData, {
     }];
 
     const replyData = {
-      text: `*𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 YTS SEARCH*\n\n🔎 *Search for:* *${q}*`,
+      text: `> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢  𝗬𝗧𝗦 𝗦𝗘𝗔𝗥𝗖𝗛🔍\n\n🔎 *Search for:* *${q}*`,
       footer: footer,
       title: "Select a video from the results below:",
       buttonText: "🔢 Reply with a number",
@@ -871,8 +871,8 @@ cmd(songInfo, async (client, message, from, {
         }]
       }];
       const messageContent = {
-        text: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*\n\n   *song download*",
-        footer: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*",
+        text: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀\n\n   *song download*",
+        footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀",
         buttonText: "```🔢 Reply below number you need song type,```",
         sections: options
       };
@@ -893,8 +893,8 @@ cmd(songInfo, async (client, message, from, {
         }]
       }];
       const messageContent = {
-        text: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*\n\n*song download*",
-        footer: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*",
+        text: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀\n\n*song download*",
+        footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀",
         buttonText: "```🔢 Reply below number you need song type,```",
         sections: options
       };
@@ -959,7 +959,7 @@ cmd(commandytdocs, async (client, message, chat, { from, q, reply }) => {
     }
 
     const videoUrl = q.split('|')[0];
-    const customName = q.split('|')[1] || "VAJIRA-MD";
+    const customName = q.split('|')[1] || "DarkNero-MD";
 
     const downloadInfo = await fetchJson(`https://vajira-api-0aaeb51465b5.herokuapp.com/download/ytmp3?url=${videoUrl}`);
 
@@ -1104,7 +1104,7 @@ cmd({
             document: { url: data.result.download_url }, 
             mimetype: "video/mp4", 
             fileName: `${data.result.title}.mp4`, 
-            caption: `> *${yts.title}*\n *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*`
+            caption: `> *${yts.title}*\n > 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`
         }, { quoted: mek });
     } catch (e) {
         console.log(e);
@@ -1134,7 +1134,7 @@ cmd({
         document: { url: data.result.downloadUrl }, 
         mimetype: "audio/mpeg", 
         fileName: `${data.result.title}.mp3`, 
-        caption: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙰𝙻𝙴𝚇𝙰-𝙼𝙳 〽️ᵀᴰᴰ*`
+        caption: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`
     }, { quoted: mek });
 } catch (e) {
     console.log(e);
