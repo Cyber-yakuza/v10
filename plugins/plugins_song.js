@@ -901,10 +901,7 @@ cmd(songInfo, async (client, message, from, {
       return await client.replyList(user, messageContent);
     }
 
-    const songDetails = `🥷 *𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥*📥\n\n┌──────────────────\n\n*📃 𝗧𝗜𝗧𝗟𝗘:* ${video.title}\n*📊 𝗩𝗜𝗘𝗪𝗦:* ${video.views}\n*⏰ 𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡:* ${video.timestamp}\n*🔥 𝗔𝗚𝗢 :* ${video.ago}\n*🔗 𝗨𝗥𝗟:* ${video.url} \n\n└──────────────────
-
-
-> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`;
+    const songDetails = `🥷 *𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥*📥\n\n┌──────────────────\n\n*📃 𝗧𝗜𝗧𝗟𝗘:* ${video.title}\n*📊 𝗩𝗜𝗘𝗪𝗦:* ${video.views}\n*⏰ 𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡:* ${video.timestamp}\n*🔥 𝗔𝗚𝗢 :* ${video.ago}\n*🔗 𝗨𝗥𝗟:* ${video.url} \n\n└──────────────────> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`;
     const downloadOptions = [{
       'title': '',
       'rows': [{
