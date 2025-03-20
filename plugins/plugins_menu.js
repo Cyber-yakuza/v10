@@ -265,7 +265,7 @@ cmd(commandrepo, async ( botInstance,message,chat,{from,quoted,body,isCmd,comman
     };
     const forwardedInfo = {
       newsletterJid: "120363382823666763@newsletter",
-      newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+      newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
       serverMessageId: 999
     };
     const contextInfo = {
