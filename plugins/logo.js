@@ -81,7 +81,7 @@ cmd({
       externalAdReply: {
         title: "> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢💀",
         body: "𝙳𝙰𝚁𝙺 𝙽𝙴𝚁𝙾 𝙼𝙳",
-        thumbnailUrl: "https://i.ibb.co/RpFzfr64/4697.jpg",
+        thumbnailUrl: "https://i.ibb.co/YTXmjQ5S/4597.jpg",
         sourceUrl: "https://whatsapp.com/channel/0029Vb0ux6E5Ui2VPhL49N2e",
         mediaType: 1,
         renderLargerThumbnail: true,
@@ -490,4 +490,3 @@ cmd({
     }, { quoted: message });
   }
 });
-
