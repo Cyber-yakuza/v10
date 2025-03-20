@@ -54,7 +54,7 @@ cmd(settingsCommand, async (client, message, chat, { from, isOwner, prefix, repl
     const listMessage = {
       image: { url: 'https://i.ibb.co/8gk5FsHB/3175.jpg' },
       caption: "> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗦𝗘𝗧𝗧𝗜𝗡𝗚 𝗟𝗜𝗦𝗧⚙️",
-      footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*",
+      footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀",
       buttonText: "*🔢 Select an option below*",
       sections
     };
