@@ -74,13 +74,13 @@ cmd({
 ┃▸49⊷ Anonymous hacker (avatar cyan neon)
 ┃▸50⊷ Birthday cake
 ╰━━━━━━━━━━━━━━━⪼
-> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ*`;
+> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙳𝙰𝚁𝙺 𝙽𝙴𝚁𝙾 𝙼𝙳*`;
 
     const contextInfo = {
       mentionedJid: [sender], // Mention the sender
       externalAdReply: {
-        title: "> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
-        body: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+        title: "> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢💀",
+        body: "𝙳𝙰𝚁𝙺 𝙽𝙴𝚁𝙾 𝙼𝙳",
         thumbnailUrl: "https://i.ibb.co/RpFzfr64/4697.jpg",
         sourceUrl: "https://whatsapp.com/channel/0029Vb0ux6E5Ui2VPhL49N2e",
         mediaType: 1,
@@ -266,7 +266,7 @@ cmd({
         if (logoUrl) {
           await conn.sendMessage(from, {
             image: { url: logoUrl },
-            caption: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*`,
+            caption: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`,
           }, { quoted: mek });
         }
       }
@@ -351,7 +351,7 @@ cmd({
       `18 ➠ 3D Foil Balloons\n` +
       `19 ➠ 3D Colourful Paint\n` +
       `20 ➠ American Flag 3D\n\n` +
-      `> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ*`;
+      `> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙳𝙰𝚁𝙺 𝙽𝙴𝚁𝙾 𝙼𝙳*`;
 
     const contextInfo = {
       mentionedJid: [sender],
@@ -359,7 +359,7 @@ cmd({
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
         newsletterJid: '120363382823666763@newsletter',
-        newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+        newsletterName: "𝙳𝙰𝚁𝙺 𝙽𝙴𝚁𝙾 𝙼𝙳",
         serverMessageId: 999
       }
     };
@@ -406,7 +406,7 @@ cmd({
           let apiResponse = await fetchJson(`${apiUrl}${logoUrls[userResponse]}&name=${q}`);
           await bot.sendMessage(from, {
             image: { url: apiResponse.result.download_url },
-            caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*"
+            caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀"
           }, { quoted: message });
         } else {
           reply("*_Invalid number. Please reply with a valid number._*");
@@ -464,7 +464,7 @@ cmd({
         newsletterJid: "120363382823666763@newsletter"
       },
       //externalAdReply: {
-        //title: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*",
+        //title: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀",
         //body: "*𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*",
         //sourceUrl: "https://www.youtube.com/@Sadiya-Tech",
         //thumbnailUrl: "https://raw.githubusercontent.com/tharumin/Alexa_Voice/refs/heads/main/20241214_204755.jpg",
@@ -477,7 +477,7 @@ cmd({
 
     await client.sendMessage(from, {
       image: { url: apiResponse.result.download_url },
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*",
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀",
       contextInfo
     }, { quoted: message });
 
@@ -490,3 +490,4 @@ cmd({
     }, { quoted: message });
   }
 });
+
