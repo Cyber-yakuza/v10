@@ -248,15 +248,16 @@ cmd(commandrepo, async ( botInstance,message,chat,{from,quoted,body,isCmd,comman
     let repoUrl = repoDetails.repoo;
     let repoMessage = `
 *╭═══════════════⚆*
- │◈ OWNER NUMBER: 94704243771
+ │◈ 🥷𝗢𝗪𝗡𝗘𝗥 𝗡𝗨𝗠𝗕𝗘𝗥: 0774071805 - 0766934612
  │◈  
- │◈ MALAKA-MD repo: ${repoUrl}
+ │◈🥷 𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗥𝗘𝗣𝗢: ${repoUrl}
  │◈
- │◈ BOT UPDATE NEWS: https://chat.whatsapp.com/KOMw1bDPrbO4xp4X680MB9
+ │◈ 🥷𝗕𝗢𝗧 𝗨𝗣𝗗𝗔𝗧𝗘 𝗡𝗘𝗪𝗦: https://whatsapp.com/channel/0029Vb5Fyxk5q08bnf0P9Z1w
  │◈ 
 *╰═══════════════⚆*
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*
+
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `;
 
     const imageMessage = {
