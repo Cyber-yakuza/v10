@@ -52,9 +52,9 @@ cmd(settingsCommand, async (client, message, chat, { from, isOwner, prefix, repl
     }));
 
     const listMessage = {
-      image: { url: 'https://i.ibb.co/yBYYzRkR/4279.jpg' },
-      caption: "*ᴍᴀʟᴀᴋᴀ-ᴍᴅ ᴄᴜꜱᴛᴏᴍɪꜱᴇꜱᴇᴛᴛɪɴɢ 👩‍💻*",
-      footer: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*",
+      image: { url: 'https://i.ibb.co/8gk5FsHB/3175.jpg' },
+      caption: "> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗦𝗘𝗧𝗧𝗜𝗡𝗚 𝗟𝗜𝗦𝗧⚙️",
+      footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*",
       buttonText: "*🔢 Select an option below*",
       sections
     };
