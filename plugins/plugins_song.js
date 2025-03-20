@@ -153,7 +153,7 @@ const songCommand = {
 
 cmd(songCommand, async (botInstance, message, metadata, context) => {
   try {
-    const replyMessages = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+    const replyMessages = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
     
     if (!context.q) {
       return context.reply(replyMessages.giveme);
@@ -237,7 +237,7 @@ cmd(Commandvideo, async (client, message, fromUser, {
   groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply
 }) => {
   try {
-    const replyMessage = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+    const replyMessage = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
     if (!q) {
       return reply(replyMessage.giveme);
     }
@@ -369,7 +369,7 @@ cmd(Commandytmp3, async (bot, message, user, {
   from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply
 }) => {
   try {
-    const replyMsg = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+    const replyMsg = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
     
     if (!q) {
       return reply(replyMsg.url);
@@ -406,7 +406,7 @@ cmd(Commandytmp3, async (bot, message, user, {
     console.log(error);
 
     try {
-      const replyMsg = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+      const replyMsg = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
 
       if (!q) {
         return reply(replyMsg.url);
@@ -491,7 +491,7 @@ cmd(commandytmp4, async (client, message, args, { from, body, isCmd, command, q,
     // Fetch details and response messages from external sources
     const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     const footerText = details.footer;
-    const responseMessages = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+    const responseMessages = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
 
     // Extract YouTube URL and video quality
     const [youtubeUrl, quality] = q.split(" & ");
@@ -525,7 +525,7 @@ cmd(commandytmp4, async (client, message, args, { from, body, isCmd, command, q,
       // Fallback attempt if the first download method fails
       const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
       const footerText = details.footer;
-      const responseMessages = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+      const responseMessages = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
 
       const [youtubeUrl, quality] = q.split(" & ");
 
@@ -570,7 +570,7 @@ cmd(Commandytvdoc, async (message, context, sender, {
 }) => {
   try {
     // Fetch response message
-    const response = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+    const response = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
     const videoUrl = q.split(" & ")[0];
     const additionalParam = q.split(" & ")[1];
 
@@ -610,7 +610,7 @@ cmd(Commandytvdoc, async (message, context, sender, {
   } catch (error) {
     // Handle errors and retry
     try {
-      const fallbackResponse = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
+      const fallbackResponse = (await fetchJson("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Mreply.json")).replyMsg;
       const fallbackUrl = q.split(" & ")[0];
       const fallbackParam = q.split(" & ")[1];
 
