@@ -245,7 +245,7 @@ cmd(Commandvideo, async (client, message, fromUser, {
     const searchResults = await yts(q);
     const firstVideo = searchResults.videos[0];
     const videoUrl = firstVideo.url;
-    const videoDetails = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const videoDetails = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     let footerMessage = videoDetails.footer;
 
     const sections = [{
@@ -489,7 +489,7 @@ const commandytmp4 = {
 cmd(commandytmp4, async (client, message, args, { from, body, isCmd, command, q, reply }) => {
   try {
     // Fetch details and response messages from external sources
-    const details = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     const footerText = details.footer;
     const responseMessages = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
 
@@ -523,7 +523,7 @@ cmd(commandytmp4, async (client, message, args, { from, body, isCmd, command, q,
   } catch (error) {
     try {
       // Fallback attempt if the first download method fails
-      const details = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+      const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
       const footerText = details.footer;
       const responseMessages = (await fetchJson("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/Mreply.json")).replyMsg;
 
@@ -583,7 +583,7 @@ cmd(Commandytvdoc, async (message, context, sender, {
     }
 
     // Fetch video details and process
-    const videoDetails = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const videoDetails = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     let footerText = videoDetails.footer;
     let downloadUrl = await getDownloadUrl(videoUrl, additionalParam);
     const videoInfo = await yts(videoUrl);
@@ -622,7 +622,7 @@ cmd(Commandytvdoc, async (message, context, sender, {
         return await reply(fallbackResponse.not_fo);
       }
 
-      const fallbackDetails = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+      const fallbackDetails = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
       let footerTextFallback = fallbackDetails.footer;
       let downloadUrlFallback = await ytmp444(fallbackUrl.trim(), fallbackParam.trim());
       let videoDetailsFallback = await yts(fallbackUrl);
@@ -671,7 +671,7 @@ cmd(Commandyts, async (bot, message, fromData, {
     }
 
     // Fetch data from external JSON resource
-    const response = await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json");
+    const response = await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json");
     const footer = response.data.footer;
 
     // Perform YouTube search
@@ -738,7 +738,7 @@ cmd(commandytselect, async (bot, message, options, { from, prefix, quoted, body,
     const videoUrl = video.url;
 
     // Fetch footer details from a remote JSON file
-    const remoteData = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const remoteData = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     let footerText = remoteData.footer;
 
     // Create the button options for song and video
