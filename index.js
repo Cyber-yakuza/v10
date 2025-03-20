@@ -248,7 +248,7 @@ mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message
 if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
 await conn.readMessages([mek.key])  
 const mnyako = await jidNormalizedUser(conn.user.id)
-await conn.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text: '👾'}}, { statusJidList: [mek.key.participant, mnyako] })
+await conn.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text: '💗,🗿,😊 ,😫,💫 ,🫣,🤭,😔,😒,👍,🙏,🔪,🥺,👊🏻,🍆,🍑,🙈,😼'}}, { statusJidList: [mek.key.participant, mnyako] })
 }	      
 	    if (mek.key && mek.key.remoteJid === 'status@broadcast') return
             const m = sms(conn, mek)
@@ -265,7 +265,7 @@ await conn.newsletterFollow("120363382823666763@newsletter")
 console.log("MALAKA MD CHANNEL FOLLOW ✅")
 }	 
 
-
+                                        
 const id = mek.key.server_id
 await conn.newsletterReactMessage("120363382823666763@newsletter", id, "❤️")
 
@@ -733,7 +733,7 @@ conn.forwardMessage = async (jid, message, forceForward = false, options = {}) =
                 delete (message.message && message.message.ignore ? message.message.ignore : (message.message || undefined))
                 delete message.message.viewOnceMessage.message[vtype].viewOnce
                 message.message = {
-                    ...message.message.viewOnceMessage.message
+                    ...message.message.viewOnceMessage.message                             
                 }
             }
 
