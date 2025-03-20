@@ -182,23 +182,25 @@ cmd(songCommand, async (botInstance, message, metadata, context) => {
     ];
 
     const messageContent = `
-  *\` AUDIO DOWNLOADER\`*
+  > *🥷𝗔𝗨𝗗𝗜𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥📥*
 
   ⦁⦂⦁═════════════════⦁⦂⦁
   ╭═════════════════⦁⦂⦁
-  │ 🎶 \`𝙏𝙞𝙩𝙡𝙚\` : ${video.title}
+  │ 📝 𝗧𝗜𝗧𝗟𝗘 : ${video.title}
   │
-  │ 📟 \`𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣\` : ${video.timestamp}
+  │ 📃 𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡 : ${video.timestamp}
   │
-  │ 🧭 \`𝙍𝙚𝙡𝙚𝙖𝙨𝙚\` : ${video.ago}
+  │ 📉 𝗥𝗘𝗟𝗘𝗔𝗦𝗘 : ${video.ago}
   │
-  │ 👀 \`𝙑𝙞𝙚𝙬𝙨\` : ${video.views}
+  │ 📊 𝗩𝗜𝗘𝗪𝗦 : ${video.views}
   │
-  │ 🔗 \`𝙇𝙞𝙣𝙠\` : ${video.url}
+  │ 🔗 𝗟𝗜𝗡𝗞 : ${video.url}
   │
   ╰═════════════════⦁⦂⦁
       
   ⦁⦂⦁═════════════════⦁⦂⦁
+
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
     `;
 
     const imageData = { url: video.image };
