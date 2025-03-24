@@ -109,7 +109,7 @@ await conn.sendMessage(from,{
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '120363382823666763@newsletter',
-            newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+            newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
             serverMessageId: 999
         },
         //externalAdReply: {
@@ -170,7 +170,7 @@ async (conn, mek, m, {
 
         let msg = `
 ╭──────────────────❖
-│ ᴍᴀʟᴀᴋᴀ-ᴍᴅ
+│ ᴅᴀʀᴋ ɴᴇʀᴏ
 │
 │*ꜰɪʟᴇ ɴᴀᴍᴇ :* ${fileName}
 │
@@ -197,7 +197,7 @@ async (conn, mek, m, {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363382823666763@newsletter',
-                newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+                newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                 serverMessageId: 999
             },
             //externalAdReply: {
@@ -275,12 +275,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '120363382823666763@newsletter',
-            newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+            newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
             serverMessageId: 999
         },
         //externalAdReply: {
             //title: 'MALAKA-MD',
-            //body: 'ᴍᴀʟᴀᴋᴀ-ᴍᴅ',
+            //body: 'ᴅᴀʀᴋ ɴᴇʀᴏ',
             //mediaType: 1,
             //sourceUrl: "https://github.com/MALAKA-CM/MALAKA-MD-V1",
             //thumbnailUrl: 'https://i.ibb.co/JrdxHSY/3439.jpg', // This should match the image URL provided above
@@ -309,12 +309,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
           // Send SD video
           await conn.sendMessage(from, {
             video: { url: video_sd}, // Ensure `img.allmenu` is a valid image URL or base64 encoded image
-            caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ · · ·👩‍💻*"}, { quoted: mek });
+            caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴀʀᴋ ɴᴇʀᴏ · · ·👩‍💻*"}, { quoted: mek });
         } else if (messageType === '1.2') {
           // Send HD video
           await conn.sendMessage(from, {
             video: { url: video_hd}, // Ensure `img.allmenu` is a valid image URL or base64 encoded image
-            caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ · · ·👩‍💻*"}, { quoted: mek });
+            caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴀʀᴋ ɴᴇʀᴏ · · ·👩‍💻*"}, { quoted: mek });
         } else if (messageType === '2.1') {
           // Send audio as an audio file
           await conn.sendMessage(from, { audio: { url: video_sd }, mimetype: "audio/mpeg" }, { quoted: mek });
@@ -323,8 +323,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
           await conn.sendMessage(from, {
             document: { url: video_sd },
             mimetype: "audio/mpeg",
-            fileName: `ᴍᴀʟᴀᴋᴀ-ᴍᴅ/TWDL.mp3`,
-            caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ · · ·👩‍💻*",
+            fileName: `ᴅᴀʀᴋ ɴᴇʀᴏ/TWDL.mp3`,
+            caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴀʀᴋ ɴᴇʀᴏ · · ·👩‍💻*",
             contextInfo: {
                 mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
                 groupMentions: [],
@@ -332,12 +332,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363382823666763@newsletter',
-                    newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+                    newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                     serverMessageId: 999
                 },
                 //externalAdReply: {
                     //title: 'MALAKA-MD',
-                    //body: 'ᴍᴀʟᴀᴋᴀ-ᴍᴅ',
+                    //body: 'ᴅᴀʀᴋ ɴᴇʀᴏ',
                     //mediaType: 1,
                     //sourceUrl: "https://github.com/MALAKA-CM/MALAKA-MD-V1",
                     //thumbnailUrl: 'https://i.ibb.co/JrdxHSY/3439.jpg', // This should match the image URL provided above
@@ -397,7 +397,7 @@ cmd({
                                         isForwarded: true,
                                         forwardedNewsletterMessageInfo: {
                                             newsletterJid: '120363382823666763@newsletter',
-                                            newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+                                            newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                                             serverMessageId: 999
                                         },
                                         //externalAdReply: {
@@ -431,7 +431,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
- await conn.sendMessage(from, { text: '📥 *ᴍᴀʟᴀᴋᴀ-ᴍᴅ ιѕ ᴅᴏᴡɴʟᴏᴅɪɴɢ...* 📥' }, { quoted: mek });
+ await conn.sendMessage(from, { text: '📥 *ᴅᴀʀᴋ ɴᴇʀᴏ ιѕ ᴅᴏᴡɴʟᴏᴅɪɴɢ...* 📥' }, { quoted: mek });
 
 
   if (!args[0]) {
@@ -696,7 +696,7 @@ m.react('⬇️')
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363382823666763@newsletter',
-                    newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+                    newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                     serverMessageId: 999
                 },
                 //externalAdReply: {
@@ -751,7 +751,7 @@ cmd(tiktokCommand, async (sendMessage, message, args, context) => {
     let videoMessages = await Promise.all(topResults.map(video => createVideoMessage(video.videoUrl, sendMessage)));
 
     const headerMessage = { text: '' };
-    const footerMessage = { text: "> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ" };
+    const footerMessage = { text: "> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀʀᴋ ɴᴇʀᴏ" };
     const buttonOptions = { buttons: [] };
 
     let interactiveMessages = videoMessages.map((videoMessage, index) => ({
@@ -881,7 +881,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         for (let i = 0; i < selectedVideos.length; i++) {
           let video = selectedVideos[i];
           let cap = `Title : ${video.title}`;
-          let foot = `© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍᴀʟᴀᴋᴀ-ᴍᴅ · · ·`;
+          let foot = `© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴀʀᴋ ɴᴇʀᴏ · · ·`;
           const mediaMessage = await prepareWAMessageMedia({ image: { url: video.thumbnail } }, { upload: conn.waUploadToServer });
           push.push({
             body: proto.Message.InteractiveMessage.Body.fromObject({
@@ -907,7 +907,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
           });
         }
         let sadee = `MALAKA-MD`;
-        let foot2 = `ᴍᴀʟᴀᴋᴀ-ᴍᴅ · · ·`;
+        let foot2 = `ᴅᴀʀᴋ ɴᴇʀᴏ · · ·`;
         const msg = generateWAMessageFromContent(from, {
           viewOnceMessage: {
             message: {
@@ -934,7 +934,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                       isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                       newsletterJid: '120363382823666763@newsletter',
-                      newsletterName: 'ᴍᴀʟᴀᴋᴀ-ᴍᴅ',
+                      newsletterName: 'ᴅᴀʀᴋ ɴᴇʀᴏ',
                       serverMessageId: 143
                     }
                     }
