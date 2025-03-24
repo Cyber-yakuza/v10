@@ -78,7 +78,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
             return reply("OpenAI failed to respond. Please try again later.");
         }
 
-        await reply(`🧠 *OpenAI *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*:*\n\n${data.result}`);
+        await reply(`🧠 *OpenAI > 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*:*\n\n${data.result}`);
         await react("✅");
     } catch (e) {
         console.error("Error in OpenAI command:", e);
@@ -108,7 +108,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
             return reply("AI failed to respond. Please try again later.");
         }
 
-        await reply(`🤖 *AI *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*:*\n\n${data.message}`);
+        await reply(`🤖 *AI > 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*:*\n\n${data.message}`);
         await react("✅");
     } catch (e) {
         console.error("Error in AI command:", e);
@@ -139,7 +139,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
             return reply("DeepSeek AI failed to respond. Please try again later.");
         }
 
-        await reply(`👾 *DeepSeek AI *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*:*\n\n${data.answer}`);
+        await reply(`👾 *DeepSeek AI > 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*:*\n\n${data.answer}`);
         await react("✅");
     } catch (e) {
         console.error("Error in DeepSeek AI command:", e);
