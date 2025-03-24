@@ -380,9 +380,9 @@ cmd({
   try {
     await message.sendMessage(from, {
       contacts: {
-        displayName: "🧚‍♂️⃝𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳💕⃟*",
+        displayName: "🧚‍♂️KAVEESHA💕⃟*",
         contacts: [{
-          vcard: "BEGIN:VCARD\nVERSION:3.0\nFN: 🧚‍♂️⃝𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳💕⃟*\nORG: Web Developer;\nTEL;type=CELL;type=VOICE;waid=94704243771:+94704243771\nEND:VCARD"
+          vcard: "BEGIN:VCARD\nVERSION:3.0\nFN: 🧚‍♂️KAVEESHA💕⃟*⃟*\nORG: Web Developer;\nTEL;type=CELL;type=VOICE;waid=94774071805:+94774071805\nEND:VCARD"
         }]
       },
       quoted
