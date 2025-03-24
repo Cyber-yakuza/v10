@@ -91,7 +91,7 @@ cmd(tiktokCommand, async (client, message, args, { from: chatId,l: logger,prefix
 
     // Fetch TikTok video details from an external API
     const tiktokData = await fetchJson(`https://malaka-md-api-bot.vercel.app/download/tiktokdl?url=${query}`);
-    let responseMessage = `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*\n\n*TIKTOK DOWNLOADER*\n\n*📃 Title:* ${tiktokData.result.title}\n*✍🏼 Link:* ${query}`;
+    let responseMessage = `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*\n\n*TIKTOK DOWNLOADER*\n\n*📃 Title:* ${tiktokData.result.title}\n*✍🏼 Link:* ${query}`;
 
     // Non-button mode: Provide download options as a list
     const withoutWatermarkSection = {
@@ -149,7 +149,7 @@ cmd(tiktokCommand, async (client, message, args, { from: chatId,l: logger,prefix
       caption: responseMessage,
       title: '',
       buttonText: "*🔢 Reply below number*",
-      footer: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*",
+      footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*",
       sections: sections
     };
 
@@ -181,7 +181,7 @@ cmd(Commandttw, async (bot, message, context, {
     const videoMessage = {
       video: videoUrl,
       mimetype: "video/mp4",
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     };
     
     const quotedMessage = { quoted: message };
@@ -223,7 +223,7 @@ cmd(Commandttws, async (bot, message, context, {
       video: videoUrl,
       mimetype: "video/mp4",
       ptv:true,
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     };
     
     const quotedMessage = { quoted: message };
@@ -272,7 +272,7 @@ cmd(commandtnd, async (client, message, metadata, {
     const videoOptions = {
       video: videoMessage,
       mimetype: "video/mp4",
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     };
     const quotedMessage = {
       quoted: message
@@ -332,7 +332,7 @@ cmd(commandtnds, async (client, message, metadata, {
       video: videoMessage,
       mimetype: "video/mp4",
       ptv:true,
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     };
     const quotedMessage = {
       quoted: message
@@ -441,7 +441,7 @@ cmd(commandtd, async (client, message, metadata, { from: senderId,quoted: quoted
       document: audioData,
       mimetype: "audio/mpeg",
       fileName: response.result.title + ".mp3",
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     };
 
     // Sending the audio file as a response
@@ -608,7 +608,7 @@ cmd(commandfbsd, async (
     await bot.sendMessage(from, {
       video: { url: sdVideo.url },
       mimetype: "video/mp4",
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     }, { quoted: message });
 
     // React with "✔"
@@ -662,7 +662,7 @@ cmd(commandfbhd, async (client, message, chat, { from,quoted,body,isCmd,command,
       await client.sendMessage(from, {
         video: { url: videoToSend.url },
         mimetype: "video/mp4",
-        caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+        caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
       }, { quoted: message });
       
       // Send reaction "✔" for success
@@ -809,7 +809,7 @@ cmd(megadl, async (bot, message, chatData, { from, q, reply }) => {
     });
 
     const fileBuffer = await megaFile.downloadBuffer();
-    await bot.sendMessage(from, { document: fileBuffer, mimetype: "application/octet-stream", caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*", fileName: "mega_file" }, { quoted: message });
+    await bot.sendMessage(from, { document: fileBuffer, mimetype: "application/octet-stream", caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*", fileName: "mega_file" }, { quoted: message });
   } catch (error) {
     console.error(error);
     reply("*ERROR..!*");
@@ -860,7 +860,7 @@ cmd(commandfbsds, async (
       video: { url: sdVideo.url },
       mimetype: "video/mp4",
       ptv: true,
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
     }, { quoted: message });
 
     // React with "✔"
@@ -915,7 +915,7 @@ cmd(commandfbhds, async (client, message, chat, { from,quoted,body,isCmd,command
         video: { url: videoToSend.url },
         mimetype: "video/mp4",
         ptv: true,
-        caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*"
+        caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*"
       }, { quoted: message });
       
       // Send reaction "✔" for success
@@ -1069,7 +1069,7 @@ cmd(xnxxCommand, async (bot, message, args, { from, q, prefix, sender, reply }) 
     const responseMessage = {
       caption: `*🔞 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️ XNXX DOWNLOADER 🔞*`,
       image: { url: 'https://i.ibb.co/Y71b1hGn/image-1741571429452.jpg' }, 
-      footer: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*",
+      footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*",
       title: '',
       buttonText: "*🔢 Reply below number*\n",
       sections: sections
@@ -1107,7 +1107,7 @@ cmd(xnxxdlcommand, async (bot, message, args, { from, quoted, q: query, reply })
     const videoUrl = { url: videoData.result.files.high };
     const messageContent = {
       video: videoUrl,
-      caption: `${videoTitle}\n\n*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*`
+      caption: `${videoTitle}\n\n> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*`
     };
 
     await bot.sendMessage(from, messageContent, { quoted: message });
