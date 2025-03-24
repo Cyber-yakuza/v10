@@ -46,12 +46,12 @@ try {
     if (!urlPattern.test(link)) {
       return reply("❗ දීලා තියෙන URL එක වැරදි. කරුණාකර link එක හොඳින් බලන්න."); // "The provided URL is incorrect. Please check the link carefully."
     }
-let info = `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*`;
+let info = `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*`;
 
    await conn.sendMessage(from, {
                         document: { url: link},
                         mimetype: "video/mp4",
-                        fileName: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*.mp4`, // Ensure `img.allmenu` is a valid image URL or base64 encoded image
+                        fileName: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*.mp4`, // Ensure `img.allmenu` is a valid image URL or base64 encoded image
                         caption: info
                                             
                       }, { quoted: mek });
