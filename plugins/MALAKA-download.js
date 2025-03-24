@@ -94,7 +94,7 @@ let desc = `
 │*👤 Developers :* ${data.datalist.list[0].developer.name}
 │
 ╰──────────────────❖
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `
 await m.react("⬆")
 await conn.sendMessage(from,{
@@ -181,7 +181,7 @@ async (conn, mek, m, {
 │*ꜰɪʟᴇ ᴛʏᴘᴇ :* ${fileType}
 │ 
 ╰──────────────────❖
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
         `
 
         // Send file to chat without downloading
@@ -262,7 +262,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
  │ _2.2_ *ᴅᴏᴄᴜᴍᴇɴᴛ*
  │ _2.3_ *ᴠᴏɪᴄᴇ*
  ╰──────────────────❖
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `;
 
     const sentMsg = await conn.sendMessage(from, {
@@ -389,7 +389,7 @@ cmd({
                                     document: { url: downloadUrl },
                                     mimetype: downloadResponse.data.result.mimetype,
                                     fileName: downloadResponse.data.result.fileName,
-                                    caption: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*`,
+                                    caption: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`,
                                     contextInfo: {
                                         mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
                                         groupMentions: [],
@@ -507,7 +507,7 @@ const msg = `
 ╰─────────────────❖
  ──────────────────❖
 ╭────────────────❖
-│ ℹ️ *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+│ ℹ️ > 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 │
 │☍ ⦁ *Title* - ${xv_info.result.title}
 │☍ ⦁ *Views* - ${xv_info.result.views}
@@ -516,7 +516,7 @@ const msg = `
 │☍ ⦁ *Size* - ${xv_info.result.size}
 ╰────────────────❖
 ──────────────────❖
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `
 
 
@@ -592,7 +592,7 @@ cmd({
     await bot.sendMessage(from, {
       video: { url: videoSource },
       mimetype: "video/mp4",
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*"
+      caption: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀"
     }, { quoted: message });
   } catch (error) {
     // Log the error and reply with the error message
@@ -627,7 +627,7 @@ cmd({
         }
 
         const movieInfo = `
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
@@ -643,7 +643,7 @@ cmd({
 *ᴀᴡᴀʀᴅꜱ:* ${data.Awards}
 *ɪᴍᴅʙ ʀᴀᴛɪɴɢ:* ${data.imdbRating}
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `;
 
         const imageUrl = data.Poster && data.Poster !== 'N/A' ? data.Poster : config.ALIVE_IMG;
@@ -688,7 +688,7 @@ m.react('⬇️')
           await conn.sendMessage(from,{
             video: {url:downloadurl},
             mimetype:"video/mp4",
-            caption: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*`,
+            caption: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`,
             contextInfo: {
                 mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
                 groupMentions: [],
