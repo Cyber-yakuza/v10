@@ -687,27 +687,25 @@ editedMessage: {
   }, {})
 }
 
-
-conn.ev.on("call", async (callEvents) => {
+// Handling Incoming Calls
+bot.ev.on("call", async (callData) => {
   if (config.ANTI_CALL === "true") {
-    for (const callEvent of callEvents) {
-      if (callEvent.status === "offer") {
-        if (!callEvent.isGroup) {
-          try {
-            await conn.sendMessage(callEvent.from, {
-              text: "*Call rejected automatically because the owner is busy ⚠️*\n\n*හිමිකරු කාර්යබහුල බැවින් ඇමතුම ස්වයංක්‍රීයව ප්‍රතික්ෂේප විය කරැණාකර මද වෙලාවකින් උත්සහ කරන්න ⏰*",
-              mentions: [callEvent.from],
-            });
-            await conn.rejectCall(callEvent.id, callEvent.from);
-          } catch (error) {
-            console.error("Error processing call event:", error);
+      for (const call of callData) {
+          if (call.status === "offer") {
+              if (!call.isGroup) {
+                  await bot.sendMessage(call.from, {
+                      text: "*_☎️ කොල් අරන් වදයක් වෙන්න එපා😂💔_* \n*_📵 No Calls Allowed_*",
+                      mentions: [call.from]
+                  });
+
+                  await bot.rejectCall(call.id, call.from);
+              } else {
+                  await bot.rejectCall(call.id, call.from);
+              }
           }
-        }
       }
-    }
   }
 });
-    
 //============================for rvo================================================
         conn.downloadAndSaveMediaMessage = async(message, filename, attachExtension = true) => {
                 let quoted = message.msg ? message.msg : message
