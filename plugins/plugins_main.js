@@ -114,7 +114,7 @@ async function sendNews(client, groupId, newsItem, newsSource) {
     if (newsItem.url) {
       message += `\n\n*Read more:* ${newsItem.url}`;
     }
-    message += "\n\n*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*";
+    message += "\n\n> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*";
 
     try {
       if (newsItem.image) {
@@ -190,7 +190,7 @@ async function getTikTokVideos() {
 
 async function sendTikTokVideo(client, groupId, video) {
   if (video) {
-    const caption = `${video.title}\n\n*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*`;
+    const caption = `${video.title}\n\n> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*`;
     await client.sendMessage(groupId, {
       video: { url: video.url },
       ptv: true,
