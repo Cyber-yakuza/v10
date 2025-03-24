@@ -193,7 +193,7 @@ async function sendTikTokVideo(client, groupId, video) {
     const caption = `${video.title}\n\n> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*`;
     await client.sendMessage(groupId, {
       video: { url: video.url },
-      ptv: true,
+    
       caption: caption
     });
   }
