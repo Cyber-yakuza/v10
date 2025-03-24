@@ -687,25 +687,7 @@ editedMessage: {
   }, {})
 }
 
-// Handling Incoming Calls
-bot.ev.on("call", async (callData) => {
-  if (config.ANTI_CALL === "true") {
-      for (const call of callData) {
-          if (call.status === "offer") {
-              if (!call.isGroup) {
-                  await bot.sendMessage(call.from, {
-                      text: "*_☎️ කොල් අරන් වදයක් වෙන්න එපා😂💔_* \n*_📵 No Calls Allowed_*",
-                      mentions: [call.from]
-                  });
 
-                  await bot.rejectCall(call.id, call.from);
-              } else {
-                  await bot.rejectCall(call.id, call.from);
-              }
-          }
-      }
-  }
-});
 //============================for rvo================================================
         conn.downloadAndSaveMediaMessage = async(message, filename, attachExtension = true) => {
                 let quoted = message.msg ? message.msg : message
