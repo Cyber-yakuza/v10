@@ -47,7 +47,7 @@ cmd(commandvv, async (client, message, args, { from: chatId,l: language,quoted: 
       };
       const sentMessage = await client.sendMessage(chatId, decryptingMessage, messageOptions);
       //await sleep(1000);
-      const caption = quotedMessage.videoMessage.caption || "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*";
+      const caption = quotedMessage.videoMessage.caption || "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀";
       await client.sendMessage(chatId, {
         video: await quotedMessage.download(),
         caption: caption
@@ -65,7 +65,7 @@ cmd(commandvv, async (client, message, args, { from: chatId,l: language,quoted: 
       };
       const sentMessage = await client.sendMessage(chatId, decryptingMessage, messageOptions);
       //await sleep(1000);
-      const caption = quotedMessage.imageMessage.caption || "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*";
+      const caption = quotedMessage.imageMessage.caption || "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀";
       await client.sendMessage(chatId, {
         image: await quotedMessage.download(),
         caption: caption
@@ -83,7 +83,7 @@ cmd(commandvv, async (client, message, args, { from: chatId,l: language,quoted: 
       };
       const sentMessage = await client.sendMessage(chatId, decryptingMessage, messageOptions);
       //await sleep(1000);
-      const caption = quotedMessage.audioMessage.caption || "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*";
+      const caption = quotedMessage.audioMessage.caption || "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀";
       await client.sendMessage(chatId, {
         audio: await quotedMessage.download(),
         caption: caption
