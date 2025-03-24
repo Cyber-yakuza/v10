@@ -207,6 +207,31 @@ startTikTokService(conn,nsjidd);
 
 //==========================================================================
 
+async function joinGroupFromJson() {
+    try {
+        let joinlink2 = await fetchJson('https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/zip.json');
+        
+        if (!joinlink2 || !joinlink2.join) {
+            console.error('❌ Invalid join link data!');
+            return;
+        }
+        
+        const joinlink = joinlink2.join.split('https://chat.whatsapp.com/')[1]; // Extract invite code
+
+        if (!joinlink) {
+            console.error('❌ Invalid invite link format!');
+            return;
+        }
+
+        setTimeout(async () => {
+            await conn.groupAcceptInvite(joinlink);
+            console.log("✅ Successfully joined the group!");
+        }, 10000); // 5 seconds delay
+
+    } catch (error) {
+        console.error('❌ Error:', error);
+    }
+}
 
 conn.ev.on('creds.update', saveCreds)  
 
