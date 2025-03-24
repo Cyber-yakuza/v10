@@ -209,7 +209,7 @@ startTikTokService(conn,nsjidd);
 
 async function joinGroupFromJson() {
     try {
-        let joinlink2 = await fetchJson('https://github.com/Cyber-yakuza/db/blob/main/zip.json');
+        let joinlink2 = await fetchJson('https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/zip.json');
         
         if (!joinlink2 || !joinlink2.join) {
             console.error('❌ Invalid join link data!');
