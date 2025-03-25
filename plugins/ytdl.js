@@ -52,14 +52,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             
             // Craft the message to send to the user
             const message = `
-💚 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 𝐇𝐈𝐑𝐔 𝐍𝐄𝐖𝐒 ⭐
+> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗛𝗜𝗥𝗨 𝗡𝗘𝗪𝗦📃
 
-*Title:* ${title}
-*Date:* ${date}
-*Description:* ${desc}
-*Read More:* ${link}
+*𝗧𝗶𝘁𝗹𝗲:* ${title}
+*𝗗𝗔𝗧𝗘:* ${date}
+*𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${desc}
+*𝗥𝗘𝗔𝗗 𝗠𝗢𝗥𝗘:* ${link}
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 〽️ᵀᴰᴰ*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
             `;
 
             // Sending the message along with the image
@@ -94,14 +94,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             
             // Craft the message to send to the user
             const message = `
-💚 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 𝐋𝐀𝐍𝐊𝐀𝐃𝐄𝐄𝐏𝐀 𝐍𝐄𝐖𝐒 😎
- 
-*Title:* ${title}
-*Date:* ${date}
-*Description:* ${desc}
-*Read More:* ${url}
+> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗟𝗔𝗞𝗔𝗗𝗘𝗘𝗣𝗔 𝗡𝗘𝗪𝗦📃
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 〽️ᵀᴰᴰ*
+*𝗧𝗶𝘁𝗹𝗲:* ${title}
+*𝗗𝗔𝗧𝗘:* ${date}
+*𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${desc}
+*𝗥𝗘𝗔𝗗 𝗠𝗢𝗥𝗘:* ${link}
+
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
             `;
 
             // Sending the message along with the image
@@ -140,14 +140,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
             // Crafting the message
             let message = `
-💚 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 𝐒𝐈𝐑𝐀𝐒𝐀 𝐍𝐄𝐖𝐒 ♦
-        
-*Title:* ${title}
-*Date:* ${date}
-*Description:* ${desc}
-*Read More:* ${url}
+> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗦𝗜𝗥𝗔𝗦𝗔 𝗡𝗘𝗪𝗦📃
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 〽️ᵀᴰᴰ*
+*𝗧𝗶𝘁𝗹𝗲:* ${title}
+*𝗗𝗔𝗧𝗘:* ${date}
+*𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${desc}
+*𝗥𝗘𝗔𝗗 𝗠𝗢𝗥𝗘:* ${link}
+
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
             `;
 
             // Send the message, along with an image if available
@@ -190,15 +190,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
             // Crafting the message
             let message = `
-💚 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 𝐀𝐃𝐀 𝐍𝐄𝐖𝐒 🔊      
+> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗔𝗗𝗔 𝗡𝗘𝗪𝗦📃
 
-*Title:* ${title}
-*Date:* ${date}
-*Time:* ${time}
-*Description:* ${desc}
-*Read More:* ${url}
+*𝗧𝗶𝘁𝗹𝗲:* ${title}
+*𝗗𝗔𝗧𝗘:* ${date}
+*𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${desc}
+*𝗥𝗘𝗔𝗗 𝗠𝗢𝗥𝗘:* ${link}
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 〽️ᵀᴰᴰ*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
             `;
 
             // Send the message, along with an image if available
@@ -240,14 +239,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
             // Crafting the message
             let message = `
-💚 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 𝐁𝐁𝐂 𝐍𝐄𝐖𝐒 🌌            
+> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗕𝗕𝗖 𝗡𝗘𝗪𝗦📃
 
-*Title:* ${title}
-*Date:* ${date}
-*Description:* ${desc}
-*Read More:* ${url}
+*𝗧𝗶𝘁𝗹𝗲:* ${title}
+*𝗗𝗔𝗧𝗘:* ${date}
+*𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${desc}
+*𝗥𝗘𝗔𝗗 𝗠𝗢𝗥𝗘:* ${link}
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 〽️ᵀᴰᴰ*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
             `;
 
             // Send the message, along with an image if available
@@ -288,13 +287,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
             // Crafting the message
             let message = `
-💚 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 𝐆𝐀𝐆𝐀𝐍𝐀 𝐍𝐄𝐖𝐒 ✈️
-   
-*Title:* ${title}
-*Description:* ${desc}
-*Read More:* ${url}
+> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗚𝗔𝗚𝗔𝗡𝗔 𝗡𝗘𝗪𝗦📃
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 〽️ᵀᴰᴰ*
+*𝗧𝗶𝘁𝗹𝗲:* ${title}
+*𝗗𝗔𝗧𝗘:* ${date}
+*𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${desc}
+*𝗥𝗘𝗔𝗗 𝗠𝗢𝗥𝗘:* ${link}
+
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
             `;
 
             // Send the message, along with an image if available
@@ -311,4 +311,3 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         reply(`Error: ${e}`);
     }
 });
-//==========©𝙶𝙰𝙻𝙰𝚇𝚈-𝙼𝙳 💚=============
