@@ -156,17 +156,17 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 let status = `
 ───────────────────
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 ───────────────────
 
 ┌────────────────
 │❖ *Uptime:*  ${runtime(process.uptime())}
 │❖ *Ram usage:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │❖ *HostName:* ${os.hostname()}
-│❖ *Owner:* 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳
+│❖ *Owner:* ᴅᴀʀᴋ-ɴᴇʀᴏ
 └────────────────
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*  
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀  
 `
 return reply(`${status}`)
 
