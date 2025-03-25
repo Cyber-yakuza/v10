@@ -103,12 +103,12 @@ await conn.sendMessage(from,{
     mimetype: 'application/vnd.android.package-archive',
     caption: desc,
     contextInfo: {
-        mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
+        mentionedJid: ['94774071805@s.whatsapp.net'], // specify mentioned JID(s) if any
         groupMentions: [],
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363382823666763@newsletter',
+            newsletterJid: '120363414413795183@newsletter',
             newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
             serverMessageId: 999
         },
@@ -191,12 +191,12 @@ async (conn, mek, m, {
           fileName: fileName, // Ensure `img.allmenu` is a valid image URL or base64 encoded image
           caption: msg,
           contextInfo: {
-            mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
+            mentionedJid: ['94774071805@s.whatsapp.net'], // specify mentioned JID(s) if any
             groupMentions: [],
             forwardingScore: 1,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363382823666763@newsletter',
+                newsletterJid: '120363414413795183@newsletter',
                 newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                 serverMessageId: 999
             },
@@ -269,12 +269,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
       image: { url: thumb}, // Ensure `img.allmenu` is a valid image URL or base64 encoded image
       caption: captionHeader,
       contextInfo: {
-        mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
+        mentionedJid: ['94774071805@s.whatsapp.net'], // specify mentioned JID(s) if any
         groupMentions: [],
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363382823666763@newsletter',
+            newsletterJid: '120363414413795183@newsletter',
             newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
             serverMessageId: 999
         },
@@ -326,12 +326,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
             fileName: `ᴅᴀʀᴋ ɴᴇʀᴏ/TWDL.mp3`,
             caption: "*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴀʀᴋ ɴᴇʀᴏ · · ·👩‍💻*",
             contextInfo: {
-                mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
+                mentionedJid: ['94774071805@s.whatsapp.net'], // specify mentioned JID(s) if any
                 groupMentions: [],
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363382823666763@newsletter',
+                    newsletterJid: '120363414413795183@newsletter',
                     newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                     serverMessageId: 999
                 },
@@ -391,12 +391,12 @@ cmd({
                                     fileName: downloadResponse.data.result.fileName,
                                     caption: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`,
                                     contextInfo: {
-                                        mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
+                                        mentionedJid: ['94774071805@s.whatsapp.net'], // specify mentioned JID(s) if any
                                         groupMentions: [],
                                         forwardingScore: 1,
                                         isForwarded: true,
                                         forwardedNewsletterMessageInfo: {
-                                            newsletterJid: '120363382823666763@newsletter',
+                                            newsletterJid: '120363414413795183@newsletter',
                                             newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                                             serverMessageId: 999
                                         },
@@ -464,7 +464,7 @@ try{
 
   await m.react('✅');
   let video = data.url;
-  let dev = '© 2024 𝘔𝘢𝘭𝘢𝘬𝘢 FB DOWNLOAD HD.'
+  let dev = '© 2024  FB DOWNLOAD HD.'
   
   try {
     await conn.sendMessage(m.chat, { video: { url: video }, caption: dev, fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
@@ -690,12 +690,12 @@ m.react('⬇️')
             mimetype:"video/mp4",
             caption: `> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`,
             contextInfo: {
-                mentionedJid: ['94704243771@s.whatsapp.net'], // specify mentioned JID(s) if any
+                mentionedJid: ['94774071805@s.whatsapp.net'], // specify mentioned JID(s) if any
                 groupMentions: [],
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363382823666763@newsletter',
+                    newsletterJid: '120363414413795183@newsletter',
                     newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ",
                     serverMessageId: 999
                 },
@@ -929,11 +929,11 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                   cards: push
                 }),
                 contextInfo: {
-                      mentionedJid: ['94704243771@s.whatsapp.net'], 
+                      mentionedJid: ['94774071805@s.whatsapp.net'], 
                       forwardingScore: 999,
                       isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                      newsletterJid: '120363382823666763@newsletter',
+                      newsletterJid: '120363414413795183@newsletter',
                       newsletterName: 'ᴅᴀʀᴋ ɴᴇʀᴏ',
                       serverMessageId: 143
                     }
