@@ -1,12 +1,12 @@
 {
-  "name": "MALAKA-MD",
+  "name": "DARK-NERO-MD",
   "version": "0.1.2",
   "description": "A WhatsApp bot created using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Malaka-md",
-    "stop": "pm2 stop Malaka-md",
-    "restart": "pm2 restart Malaka-md"
+    "start": "pm2 start index.js --deep-monitoring --attach --name DarkNero",
+    "stop": "pm2 stop DarkNero-md",
+    "restart": "pm2 restart DarkNero"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "git+https://gitlab.com/amilaKumara/btn-baileys.git",
