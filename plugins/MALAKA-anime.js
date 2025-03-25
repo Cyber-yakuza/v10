@@ -9,8 +9,8 @@ const cheerio = require('cheerio')
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 const googleTTS = require('google-tts-api')
 const { exec } = require('child_process');
-var descg = 'ᴍᴀʟᴀᴋᴀ-ᴍᴅ.'
-var imgmsg = "*ᴍᴀʟᴀᴋᴀ-ᴍᴅ 👩‍💻!*"
+var descg = 'ᴅᴀʀᴋ ɴᴇʀᴏ ʙᴏᴛ'
+var imgmsg = "ᴅᴀʀᴋ ɴᴇʀᴏ ʙᴏᴛ"
 var descgs = "It gives details of given anime name."
 var cants = "I cant find this anime."
 // Fetch API URL
@@ -231,7 +231,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const response = await axios.get(apiUrl);
         const data = response.data;
 
-        let userInfo = `     🔍_*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️**_🔎
+        let userInfo = `     🔍_> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*_🔎
         
 👤 *Username*: ${data.name || data.login}
 🔗 *Github Url*:(${data.html_url})
@@ -242,7 +242,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 📅 *Created At*: ${new Date(data.created_at).toDateString()}
 🔭 *Public Gists*: ${data.public_gists}
 
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
 `;
 
         await conn.sendMessage(from, { image: { url: data.avatar_url }, caption: userInfo }, { quoted: mek });
@@ -523,7 +523,7 @@ async (conn, mek, m, { from, reply }) => {
         const message = `
 💬 "${quote.content}"
 - ${quote.author}
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*
+> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀
         `;
         return reply(message);
     } catch (e) {
@@ -590,7 +590,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '⚠️ *Note:* All actions are for demonstration purposes only.',
             '⚠️ *Reminder:* Ethical hacking is the only way to ensure security.',
             '',
-            '*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*'
+            '> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀'
         ];
 
         for (const line of steps) {
@@ -1991,7 +1991,7 @@ cmd(img2UrlCommand, async (context, args, utils, { reply, quoted }) => {
       const uploadedImageUrl = await image2url(savedFilePath);
       console.log(uploadedImageUrl);
       await reply(
-        `🌀 URL Generated: \n${uploadedImageUrl.result.url}\n\n*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*`
+        `🌀 URL Generated: \n${uploadedImageUrl.result.url}\n\n> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`
       );
 
       await require('fs').promises.unlink(savedFilePath);
@@ -2040,7 +2040,7 @@ cmd({
                 from,
                 {
                     image: { url: image.src },
-                    caption: `*Results For:* ${query}\n\n *㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*`
+                    caption: `*Results For:* ${query}\n\n > 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀`
                 },
                 { quoted: mek }
             );
@@ -2087,7 +2087,7 @@ cmd({
 }) => {
   try {
     if (!q) return reply('Please provide text to generate QR code.');
-    await reply('*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*');
+    await reply('> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀');
     const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(q)}&size=200x200`;
     const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
     const buffer = Buffer.from(response.data, 'binary');
