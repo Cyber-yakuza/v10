@@ -279,10 +279,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
             serverMessageId: 999
         },
         //externalAdReply: {
-            //title: 'MALAKA-MD',
+            //title: 'DARK NERO',
             //body: 'ᴅᴀʀᴋ ɴᴇʀᴏ',
             //mediaType: 1,
-            //sourceUrl: "https://github.com/MALAKA-CM/MALAKA-MD-V1",
+            //sourceUrl: "https://github.com/MALAKA-CM/DARK NERO-V1",
             //thumbnailUrl: 'https://i.ibb.co/JrdxHSY/3439.jpg', // This should match the image URL provided above
             //renderLargerThumbnail: false,
             //showAdAttribution: true
@@ -336,10 +336,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
                     serverMessageId: 999
                 },
                 //externalAdReply: {
-                    //title: 'MALAKA-MD',
+                    //title: 'DARK NERO',
                     //body: 'ᴅᴀʀᴋ ɴᴇʀᴏ',
                     //mediaType: 1,
-                    //sourceUrl: "https://github.com/MALAKA-CM/MALAKA-MD-V1",
+                    //sourceUrl: "https://github.com/MALAKA-CM/DARK NERO-V1",
                     //thumbnailUrl: 'https://i.ibb.co/JrdxHSY/3439.jpg', // This should match the image URL provided above
                     //renderLargerThumbnail: false,
                     //showAdAttribution: true
@@ -650,7 +650,7 @@ cmd({
 
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${movieInfo}\n> CREATED BY MALAKA-MD`
+            caption: `${movieInfo}\n> CREATED BY DARK NERO`
         }, { quoted: mek });
     } catch (e) {
         console.error(e);
@@ -906,7 +906,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             })
           });
         }
-        let sadee = `MALAKA-MD`;
+        let sadee = `DARK NERO`;
         let foot2 = `ᴅᴀʀᴋ ɴᴇʀᴏ · · ·`;
         const msg = generateWAMessageFromContent(from, {
           viewOnceMessage: {
