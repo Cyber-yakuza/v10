@@ -86,7 +86,7 @@ const port = process.env.PORT || 8000;
 async function connectToWA() {
 //Run the function
 //await downloadAndExtractZip();
-	console.log("Connecting MALAKA-MD ✅...");
+	console.log("Connecting DARK NERO  ✅...");
     const {
         version,
         isLatest
@@ -150,19 +150,19 @@ const wegb = config.WELCOME_GOODBYE
 const antidelet = config.ANTI_DELETE
 
 let up = 
-`*[ •MALAKA-MD• ]*
+`🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗕𝗢𝗧💀
 *╭┈───────────────•*
-*│ ◦*🧑‍💻 *[ MALAK MD CHANEL ]*
-*│ ◈ https://whatsapp.com/channel/0029Vb0ux6E5Ui2VPhL49N2e*
-*│  
-*│  ◦*👨‍👦‍👦 *[ WHATSAPP GROUP ]* 
-*│ ◈ https://chat.whatsapp.com/KOMw1bDPrbO4xp4X680MB9*
-*│
-*│  ◦*🤖 *[ MALAKA MD REPO ]* 
-*│ ◈ https://github.com/MALAKA-28/MALAKA-MD*
-*│
+*│ ◦*🥷 *[ 𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗖𝗛𝗔𝗡𝗘𝗟 ]*
+*│  https://whatsapp.com/channel/0029Vb5Fyxk5q08bnf0P9Z1w*    
+*│*
+*│  ◦*🥷 *[𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗚𝗥𝗢𝗨𝗣 ]* 
+*│  https://chat.whatsapp.com/FaUgzHl9WBT1rb29e41Qkv*
+*│*
+*│  ◦*🥷 *[ 𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗥𝗘𝗣𝗢 ]* 
+*│  https://github.com/Dark-Nero/Dark-Nero-V10*
+*│*
 *╰┈───────────────•*
-*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️M*
+*🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*
 *╰┈───────────────•*
 `;
 
@@ -172,16 +172,16 @@ conn.sendMessage(conn.user.id,{ text: up, contextInfo: {
         //forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363382823666763@newsletter',
-          newsletterName: "ᴍᴀʟᴀᴋᴀ-ᴍᴅ",
+          newsletterJid: '120363414413795183@newsletter',
+          newsletterName: "ᴅᴀʀᴋ ɴᴇʀᴏ ʙᴏᴛ",
           serverMessageId: 999
         },
         externalAdReply: { 
-          title: 'ᴍᴀʟᴀᴋᴀ-ᴍᴅ',
-          body: 'MALAKA-MD',
+          title: 'ᴅᴀʀᴋ ɴᴇʀᴏ ʙᴏᴛ',
+          body: 'ᴅᴀʀᴋ-ɴᴇʀᴏ-ᴍᴅ',
           mediaType: 1,
-          sourceUrl: "https://github.com/MALAKA-28/MALAKA-MD",
-          thumbnailUrl: "https://i.ibb.co/yBYYzRkR/4279.jpg",
+          sourceUrl: "https://github.com/Dark-Nero/Dark-Nero-V10",
+          thumbnailUrl: "https://i.ibb.co/3mxnPY9M/5034.jpg",
           renderLargerThumbnail: true,
           showAdAttribution: true
         }
@@ -259,15 +259,15 @@ await conn.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text: '💗'}
             const quoted = type == 'extendedTextMessage' && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.quotedMessage || [] : []
 
 
-const metadata = await conn.newsletterMetadata("jid", "120363382823666763@newsletter")	      
+const metadata = await conn.newsletterMetadata("jid", "120363414413795183@newsletter")	      
 if (metadata.viewer_metadata === null){
-await conn.newsletterFollow("120363382823666763@newsletter")
-console.log("MALAKA MD CHANNEL FOLLOW ✅")
+await conn.newsletterFollow("120363414413795183@newsletter")
+console.log("DARK NERO MD CHANNEL FOLLOW ✅")
 }	 
 
                                         
 const id = mek.key.server_id
-await conn.newsletterReactMessage("120363382823666763@newsletter", id, "❤️")
+await conn.newsletterReactMessage("120363414413795183@newsletter", id, "💖")
 
 
 
@@ -569,12 +569,12 @@ q = args.join(' ')
     if(originalMessage.message.stickerMessage){
      
     //await conn.sendMessage(from, { audio: fs.readFileSync("./" + type.ext), mimetype:  originalMessage.message.audioMessage.mimetype, fileName:  `${m.id}.mp3` })	
-     const sdata = await conn.sendMessage(delfrom,{sticker: fs.readFileSync("./" + type.ext) ,package: 'MALAKA-MD 🌟'})
+     const sdata = await conn.sendMessage(delfrom,{sticker: fs.readFileSync("./" + type.ext) ,package: 'DARK NERO  🌟'})
     return await conn.sendMessage(delfrom, { text: `🚫 *This message was deleted !!*\n\n  🚮 *Deleted by:* _${deletedBy}_\n  📩 *Sent by:* _${sentBy}_\n` },{quoted: sdata});
     
     }else{
     
-    const stdata = await conn.sendMessage(delfrom,{sticker: fs.readFileSync("./" + type.ext) ,package: 'MALAKA-MD 🌟'})
+    const stdata = await conn.sendMessage(delfrom,{sticker: fs.readFileSync("./" + type.ext) ,package: 'DARK NERO  🌟'})
     return await conn.sendMessage(delfrom, { text: `🚫 *This message was deleted !!*\n\n  🚮 *Deleted by:* _${deletedBy}_\n  📩 *Sent by:* _${sentBy}_\n` },{quoted: stdata});
     
       }
@@ -627,8 +627,8 @@ mentionedJid: [m.sender],
 forwardingScore: 999, 
 isForwarded: true, 
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363382823666763@newsletter', 
-newsletterName: "乡𝕄𝔸𝕃𝔸𝕂𝔸 𝕞𝕕 ࿐", 
+newsletterJid: '120363414413795183@newsletter', 
+newsletterName: "𝐃𝐀𝐑𝐊  𝐍𝐄𝐑𝐎 𝐌𝐃", 
 serverMessageId: 999 
 }}}, { quoted: quotemek || mek})
 }
@@ -765,7 +765,7 @@ const isBanUser = [ ...plynYnna ]
       .map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net")
       .includes(sender)
 const bandgroup = await fetchJson(`https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/Bandgroup.json`);
-const plyn = Array.isArray(bandgroup) ? bandgroup : ["120363367797828082"];
+const plyn = Array.isArray(bandgroup) ? bandgroup : ["120363150082064437"];
 const isBanGroup = plyn
     .map((v) => v.replace(/[^0-9]/g, "") + "@g.us")
     .includes(sender); // group JID හෝ sender ගැලපේ නම් true
@@ -775,7 +775,7 @@ if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return 
 if(!isOwner && !isGroup && config.MODE === "groups") return 
 
-if ( isCmd && isBanUser ) return reply("❌ *You are banned from using Commands.....*\n\n*_Please contact MALAKA-MD Bot Owner <94704243771> Remove your Ban_* 👨‍🔧\n")
+if ( isCmd && isBanUser ) return reply("❌ *You are banned from using Commands.....*\n\n*_Please contact DARK NERO  Bot Owner <94774071805> Remove your Ban_* 👨‍🔧\n")
 //=====================================================================================
 if ( isCmd && isBanGroup ) return 
 
@@ -1030,9 +1030,9 @@ await conn.groupParticipantsUpdate(from,[sender], 'remove')
     })
 }
 app.get("/", (req, res) => {
-res.send("📟 MALAKA-MD Working successfully!");
+res.send("🥷DARK NERO CONNECTED SUCCESSFUL💀");
 });
-app.listen(port, () => console.log(`MALAKA-Md Server listening on port http://localhost:${port}`));
+app.listen(port, () => console.log(`DARK NERO  Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
 }, 3000);
