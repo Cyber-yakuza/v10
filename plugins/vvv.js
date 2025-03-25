@@ -411,7 +411,7 @@ cmd(xnxxDownloader, async (message, bot, reply, {
 
     const sections = [buttons];
     const response = {
-      text: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*\n\n *XNXX VIDEO DOWNLOADER*\n\n*📱 Entered Name:* ${q}`,
+      text: `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 *\n\n *XNXX VIDEO DOWNLOADER*\n\n*📱 Entered Name:* ${q}`,
       footer: config.FOOTER,
       title: "Result from androidapksfree. 📲",
       buttonText: "*🔢 Reply below number*",
@@ -603,7 +603,7 @@ cmd(imageDownloader, async (client, message, user, {
 
     const sections = [messageOptions];
     const formattedMessage = {
-      text: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*\n\n   *IMG DOWNLOADER 01*\n\n*🖼️ Image Name:* " + q,
+      text: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 *\n\n   *IMG DOWNLOADER 01*\n\n*🖼️ Image Name:* " + q,
       footer: config.FOOTER,
       title: "Result from Google. 📲",
       buttonText: "Select Image",
@@ -721,7 +721,7 @@ cmd(commandmodapk, async (bot, message, options, {
     };
 
     const listMessage = {
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*",
+      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 ",
       image: { url: "https://i.ibb.co/D5760gq/xwl2e6b5.png" },
       footer: config.FOOTER,
       title: "Results from an1 📲",
@@ -782,7 +782,7 @@ cmd(commandma, async (bot, message, args, extra) => {
     const apkDownloadLink = download$("#pre_download").attr("href");
 
     // Construct the message response
-    let messageText = `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*\n\n*MOD APK-DOWNLOADER*\n\n`;
+    let messageText = `*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 *\n\n*MOD APK-DOWNLOADER*\n\n`;
     messageText += `*📚 App Name: ${appName}*\n`;
     messageText += `*📈 App Size: ${appSize}*\n`;
     messageText += `*🧬 App Version: ${appVersion}*\n`;
@@ -857,7 +857,7 @@ cmd(commandmdapk, async (client, message, args, { from, q, isDev, reply }) => {
     // Sending the APK file
     const apkDocument = {
       document: await getBuffer(apkUrl),
-      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*",
+      caption: "*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 *",
       mimetype: "application/mod.apk",
       fileName: apkFileName + ".apk"
     };
@@ -893,7 +893,7 @@ async (conn, mek, m, { from, quoted, body, q, reply }) => {
     const searchTerm = q.trim();
     if (!searchTerm) return reply(`𝖯𝗅𝖾𝖺𝗌𝖾 𝖯𝗋𝗈𝗏𝗂𝖽𝖾 𝖺 𝖲𝖾𝖺𝗋𝖼𝗁 𝖳𝖾𝗋𝗆`);
 
-    reply(`*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*`);
+    reply(`*> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*`);
     try {
         // Search for the video and download
         const videoInfo = await xnxx.download(searchTerm);
@@ -905,7 +905,7 @@ async (conn, mek, m, { from, quoted, body, q, reply }) => {
         const videoUrl = videoInfo.link_dl;
         await conn.sendMessage(
             from,
-            { video: { url: videoUrl }, caption: '*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*', mimetype: 'video/mp4' }, 
+            { video: { url: videoUrl }, caption: '*> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*', mimetype: 'video/mp4' }, 
             { quoted: mek }
         )
 
