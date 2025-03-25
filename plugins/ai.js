@@ -50,7 +50,7 @@ cmd({
       return reply("No response from the AI.");
     }
 
-    return reply("*㋛ 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 Ｍ〽️*" + aiResponse.message);
+    return reply("> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀" + aiResponse.message);
   } catch (error) {
     console.error(error);
     reply("An error occurred: " + error.message);
