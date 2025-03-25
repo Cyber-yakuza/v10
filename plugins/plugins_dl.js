@@ -1067,7 +1067,7 @@ cmd(xnxxCommand, async (bot, message, args, { from, q, prefix, sender, reply }) 
     }];
 
     const responseMessage = {
-      caption: `*🔞 𝙼𝙰𝙻𝙰𝙺𝙰-𝙼𝙳 〽️ XNXX DOWNLOADER 🔞*`,
+      caption: `> 🥷𝗗𝗔𝗥𝗞 𝗡𝗘𝗥𝗢 𝗫𝗡𝗫𝗫 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥🔞`,
       image: { url: 'https://i.ibb.co/Y71b1hGn/image-1741571429452.jpg' }, 
       footer: "> 🥷ᴘᴏᴡᴇʀᴅ ʙʏ ᴄʏʙᴇʀ ʏᴀᴋᴜᴢᴀ ᴛᴇᴀᴍ💀*",
       title: '',
