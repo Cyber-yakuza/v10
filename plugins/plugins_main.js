@@ -169,7 +169,7 @@ function startNewsService(client, groupId) {
 
 async function getTikTokVideos() {
   try {
-    const searchTerms = ["Boot status sinhala", "romantic feeling video", "sinhala status wadan", "sinhala joke videos", "Marvel movie clips"];
+    const searchTerms = ["Boot status sinhala", "Black lyrics  sinhala", "sinhala status wadan", "sinhala joke videos", "Motivation video sinhala"];
     const randomTerm = searchTerms[Math.floor(Math.random() * searchTerms.length)];
     const response = await fetchJson(`https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=${encodeURIComponent(randomTerm)}`);
 
