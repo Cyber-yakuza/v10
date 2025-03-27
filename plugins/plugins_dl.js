@@ -510,7 +510,7 @@ cmd(fbDownloaderCommand, async (client, message, args, { from,l,prefix,quoted,bo
 
     await client.sendMessage(from, { react: { text: "🎥", key: message.key } });
 
-    const details = (await axios.get("https://gitlab.com/malakamd2002/malaka-md-db/-/raw/main/ditels/ditels.json")).data;
+    const details = (await axios.get("https://raw.githubusercontent.com/Cyber-yakuza/db/refs/heads/main/ditels/ditels.json")).data;
     let footerText = details.footer;
 
     const sections = [{
