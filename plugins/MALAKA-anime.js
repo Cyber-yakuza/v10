@@ -1878,7 +1878,6 @@ cmd({
   reply("📝 *Group JIDs:*\n\n" + groupJids);
 });
 
-// 3. Set Profile Picture
 cmd({
   pattern: "setpp",
   desc: "Set bot profile picture.",
@@ -1889,16 +1888,27 @@ cmd({
 },
 async (conn, mek, m, { from, isOwner, quoted, reply }) => {
   if (!isOwner) return reply("❌ You are not the owner!");
-  if (!quoted || !quoted.message.imageMessage) return reply("❌ Please reply to an image.");
+
+  // Ensure that the quoted message exists and is an image
+  if (!quoted || !quoted.message || !quoted.message.imageMessage) {
+      return reply("❌ Please reply to an image.");
+  }
 
   try {
+      // Download the media from the quoted message
       const media = await conn.downloadMediaMessage(quoted);
-      await conn.updateProfilePicturePrivacy(conn.user.jid, { url: media });
+      
+      // Update the profile picture with the media URL
+      await conn.updateProfilePicture(conn.user.jid, { url: media });
+      
+      // Send success message
       reply("🖼️ Profile picture updated successfully!");
   } catch (error) {
+      // Catch any errors and send an error message
       reply(`❌ Error updating profile picture: ${error.message}`);
   }
 });
+
 // AutoBIO feature variables
 let autoBioInterval;
 
