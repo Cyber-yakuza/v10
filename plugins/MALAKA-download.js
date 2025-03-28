@@ -1,4 +1,4 @@
-const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, getBinaryNodeChildren, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, downloadContentFromMessage} = require('@whiskeysockets/baileys');
+const { BufferJSON, WA_DEFAULT_EPHEMERAL,updateProfilePicturePrivacy, generateWAMessageFromContent, proto, getBinaryNodeChildren, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, downloadContentFromMessage} = require('@whiskeysockets/baileys');
 const { cmd, commands } = require("../lib/command");
 const {
   GDriveDl,
@@ -951,3 +951,25 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         reply(`${e}`);
     }
 })
+
+
+cmd({
+  pattern: "setpp",
+  desc: "Set bot profile picture.",
+  category: "owner",
+  use: ".setpp",
+  react: "🖼️",
+  filename: __filename
+},
+async (conn, mek, m, { from, isOwner, quoted, reply }) => {
+  if (!isOwner) return reply("❌ You are not the owner!");
+  if (!quoted || !quoted.message.imageMessage) return reply("❌ Please reply to an image.");
+
+  try {
+      const media = await conn.downloadMediaMessage(quoted);
+      await conn.updateProfilePicturePrivacy(conn.user.jid, { url: media });
+      reply("🖼️ Profile picture updated successfully!");
+  } catch (error) {
+      reply(`❌ Error updating profile picture: ${error.message}`);
+  }
+});
