@@ -1879,28 +1879,26 @@ cmd({
 });
 
 // 3. Set Profile Picture
-
 cmd({
-    pattern: "setpp",
-    desc: "Set bot profile picture.",
-    category: "owner",
-    use: ".setpp",
-    react: "🖼️",
-    filename: __filename
+  pattern: "setpp",
+  desc: "Set bot profile picture.",
+  category: "owner",
+  use: ".setpp",
+  react: "🖼️",
+  filename: __filename
 },
 async (conn, mek, m, { from, isOwner, quoted, reply }) => {
-    if (!isOwner) return reply("❌ You are not the owner!");
-    if (!quoted || !quoted.message.imageMessage) return reply("❌ Please reply to an image.");
+  if (!isOwner) return reply("❌ You are not the owner!");
+  if (!quoted || !quoted.message.imageMessage) return reply("❌ Please reply to an image.");
 
-    try {
-        const media = await conn.downloadMediaMessage(quoted);
-        await conn.updateProfilePicture(conn.user.jid, { url: media });
-        reply("🖼️ Profile picture updated successfully!");
-    } catch (error) {
-        reply(`❌ Error updating profile picture: ${error.message}`);
-    }
+  try {
+      const media = await conn.downloadMediaMessage(quoted);
+      await conn.updateProfilePicturePrivacy(conn.user.jid, { url: media });
+      reply("🖼️ Profile picture updated successfully!");
+  } catch (error) {
+      reply(`❌ Error updating profile picture: ${error.message}`);
+  }
 });
-
 // AutoBIO feature variables
 let autoBioInterval;
 
