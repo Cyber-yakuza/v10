@@ -2107,59 +2107,67 @@ cmd({
   }
 });
 
-
-
 const commandAdmin = {
-    pattern: 'admin',
-    alias: ["decadmin"],
-    desc: 'user kenekwa admin karanna ues karanna',
-    category: "owner",
-    use: ".admin",
-    filename: __filename
-  };
-  // Import kaeapu module tika
-  cmd(commandAdmin, async (conn, message, args, { from: chatId, quoted: quotedMessage, sender: senderInfo, isGroup: isGroupChat, isAdmins: isAdmin, isBotAdmins: isBotAdmin, reply: replyFunction }) => {
-    try {
-      if (!isGroupChat) {
-        return replyFunction('❌ This command can only be used in groups!');
-      }
-  
-      if (!isAdmin) {
-        return replyFunction('❌ Only admins can use this command!');
-      }
-  
-      if (!isBotAdmin) {
-        return replyFunction('❌ Bot needs to be an admin to promote members!');
-      }
-  
-      let targetUser;
-      if (quotedMessage?.participant) {
-        targetUser = quotedMessage.participant;
-      } else if (args[0]) {
-        targetUser = args[0].replace(/[@]/g, '') + '@s.whatsapp.net';
-      } else {
-        return replyFunction('❌ Please reply to a message or mention the user you want to promote!');
-      }
-  
-      const groupMetadata = await conn.groupMetadata(chatId);
-      const groupAdmins = groupMetadata.participants.filter(p => p.admin === 'admin').map(p => p.id);
-      if (groupAdmins.includes(targetUser)) {
-        return replyFunction('❌ This user is already an admin!');
-      }
-  
-      const processingMsg = await conn.sendMessage(chatId, { text: '⌛ Processing admin promotion...' });
-  
-      try {
-        await conn.groupParticipantsUpdate(chatId, [targetUser], "promote");
-        await conn.sendMessage(chatId, { delete: processingMsg });
-        await conn.sendMessage(chatId, { text: `✅ @${targetUser.split('@')[0]} has been promoted to admin!`, mentions: [targetUser] });
-      } catch (error) {
-        console.error('Error promoting user:', error);
-        return replyFunction('❌ Failed to promote user. Make sure the user exists in the group.');
-      }
-    } catch (error) {
-      console.error('Error in admin command:', error);
-      return replyFunction('❌ Failed to process admin command. Please try again later.');
+  pattern: 'admin',
+  alias: ["decadmin"],
+  desc: 'user kenekwa admin karanna ues karanna',
+  category: "owner",
+  use: ".admin",
+  filename: __filename
+};
+
+// Import kaeapu module tika
+cmd(commandAdmin, async (conn, message, args, { from: chatId, quoted: quotedMessage, sender: senderInfo, isGroup: isGroupChat, isAdmins: isAdmin, isBotAdmins: isBotAdmin, reply: replyFunction }) => {
+  try {
+    // Ensure that the command is used in a group
+    if (!isGroupChat) {
+      return replyFunction('❌ This command can only be used in groups!');
     }
-  });
-  
+
+    // Ensure that only admins can use this command
+    if (!isAdmin) {
+      return replyFunction('❌ Only admins can use this command!');
+    }
+
+    // Ensure the bot is an admin
+    if (!isBotAdmin) {
+      return replyFunction('❌ Bot needs to be an admin to promote members!');
+    }
+
+    let targetUser;
+    if (quotedMessage?.participant) {
+      targetUser = quotedMessage.participant; // User in the quoted message
+    } else if (args[0]) {
+      targetUser = args[0].replace(/[@]/g, '') + '@s.whatsapp.net'; // If a number is mentioned directly
+    } else {
+      return replyFunction('❌ Please reply to a message or mention the user you want to promote!');
+    }
+
+    // Fetch the group metadata and participants
+    const groupMetadata = await conn.groupMetadata(chatId);
+    const groupAdmins = groupMetadata.participants.filter(p => p.admin === 'admin').map(p => p.id);
+    
+    // Check if the user is already an admin
+    if (groupAdmins.includes(targetUser)) {
+      return replyFunction('❌ This user is already an admin!');
+    }
+
+    // Send a "processing" message
+    const processingMsg = await conn.sendMessage(chatId, { text: '⌛ Processing admin promotion...' });
+
+    // Attempt to promote the user
+    try {
+      await conn.groupParticipantsUpdate(chatId, [targetUser], "promote");
+      // Delete the processing message
+      await conn.sendMessage(chatId, { delete: processingMsg });
+      // Send success message
+      await conn.sendMessage(chatId, { text: `✅ @${targetUser.split('@')[0]} has been promoted to admin!`, mentions: [targetUser] });
+    } catch (error) {
+      console.error('Error promoting user:', error);
+      return replyFunction('❌ Failed to promote user. Make sure the user exists in the group.');
+    }
+  } catch (error) {
+    console.error('Error in admin command:', error);
+    return replyFunction('❌ Failed to process admin command. Please try again later.');
+  }
+});
