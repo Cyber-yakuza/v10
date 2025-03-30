@@ -5,14 +5,23 @@ const config = require("../settings");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { DisconnectReason } = require("@whiskeysockets/baileys");
 
-// Add connection status check
-const checkConnection = (conn) => {
-    return new Promise((resolve) => {
-        if (conn?.user && conn?.ws?.readyState === 1) {
-            resolve(true);
-        } else {
-            setTimeout(() => checkConnection(conn).then(resolve), 1000);
-        }
+// Improve connection check with status and timeout
+const checkConnection = (conn, maxRetries = 3, retryDelay = 1000) => {
+    return new Promise((resolve, reject) => {
+        let retries = 0;
+        
+        const check = () => {
+            if (conn?.user && conn?.ws?.readyState === 1) {
+                resolve(true);
+            } else if (retries >= maxRetries) {
+                reject(new Error('Connection check failed after max retries'));
+            } else {
+                retries++;
+                setTimeout(check, retryDelay);
+            }
+        };
+        
+        check();
     });
 };
 
@@ -54,12 +63,14 @@ async (conn, mek, m, { from, body, isOwner }) => {
 
 //ai reply section
 cmd({
-  on: "body"
+    on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
     try {
         
-        await checkConnection(conn);
+        await checkConnection(conn).catch(error => {
+            throw new Error(`Connection check failed: ${error.message}`);
+        });
         
         const aiConfig = require('../lib/data/prompts.js');
         const genAI = new GoogleGenerativeAI(aiConfig.GEMINI_API_KEY);
@@ -68,15 +79,19 @@ async (conn, mek, m, { from, body, isOwner }) => {
         
         if (aiConfig.AI_TRIGGERS[triggerWord]) {
             try {
+                
                 if (conn?.ws?.readyState !== 1) {
-                    throw new Error('Connection lost');
+                    throw new Error('Connection not ready');
                 }
 
                 await conn.sendPresenceUpdate('composing', from)
-                    .catch(() => null);
+                    .catch(() => console.log('Failed to send presence update'));
                 
                 const query = body.split(' ').slice(1).join(' ');
                 if (!query) return m.reply('කරුණාකර මට පණිවිඩයක් ලබා දෙන්න 🙏');
+                
+                
+                await checkConnection(conn, 2, 500);
                 
                 const model = genAI.getGenerativeModel({ 
                     model: "gemini-1.5-pro",
@@ -98,14 +113,17 @@ async (conn, mek, m, { from, body, isOwner }) => {
                 const result = await chat.sendMessage(query);
                 const response = result.response.text();
                 
+                
                 if (conn?.ws?.readyState === 1) {
                     await m.reply(response)
                         .catch(e => console.error('Reply failed:', e));
+                } else {
+                    throw new Error('Connection lost before sending response');
                 }
             } catch (error) {
                 console.error('AI Error:', error);
                 if (conn?.ws?.readyState === 1) {
-                    await m.reply('පද්ධති දෝෂයක්! පසුව නැවත උත්සාහ කරන්න 🙏')
+                    await m.reply('සම්බන්ධතා දෝෂයක්! කරුණාකර මොහොතකින් නැවත උත්සාහ කරන්න 🙏')
                         .catch(() => null);
                 }
             }
