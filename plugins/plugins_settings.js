@@ -39,7 +39,8 @@ cmd(settingsCommand, async (client, message, chat, { from, isOwner, prefix, repl
       { title: "1️⃣9️⃣𝐁𝐀𝐃 𝐍𝐎 𝐁𝐋𝐎𝐂𝐊", values: ["True 🔑", "False 🔐"], command: "badno" },
       { title: "2️⃣0️⃣𝐀𝐈 𝐂𝐇𝐀𝐓 𝐁𝐎𝐓", values: ["True 🔑", "False 🔐"], command: "aichat" },
       { title: "2️⃣1️⃣𝐀𝐔𝐓𝐎 𝐍𝐄𝐖𝐒 𝐒𝐄𝐍𝐃𝐄𝐑", values: ["True 🔑", "False 🔐"], command: "autonewssender" },
-      { title: "2️⃣2️⃣𝐀𝐔𝐓𝐎 𝐓𝐈𝐊𝐓𝐎𝐊 𝐒𝐄𝐍𝐃𝐄𝐑", values: ["True 🔑", "False 🔐"], command: "autotlktoksender" }
+      { title: "2️⃣2️⃣𝐀𝐔𝐓𝐎 𝐓𝐈𝐊𝐓𝐎𝐊 𝐒𝐄𝐍𝐃𝐄𝐑", values: ["True 🔑", "False 🔐"], command: "autotlktoksender" },
+      { title: "2️⃣3️⃣𝐀𝐈 𝐑𝐄𝐏𝐋𝐀𝐘", values: ["True 🔑", "False 🔐"], command: "aireplay" }
     ];
 
     const sections = options.map((opt, index) => ({
@@ -88,6 +89,39 @@ cmd(configs, async ( context,options,parameters,{from,quoted,body,isCmd,command,
   } catch (error) {
     reply("*Error !!*");
     console.error(error);
+  }
+});
+
+const configsAI = {
+  pattern: "aireplay",
+  dontAddCommandList: true,
+  filename: __filename
+};
+
+cmd(configsAI, async (context, options, parameters, {
+  from, quoted, body, isCmd, command, args, q, isGroup,
+  sender, senderNumber, botNumber2, botNumber, pushname, 
+  isMe, isOwner, groupMetadata, groupName, participants,
+  groupAdmins, isBotAdmins, isAdmins, reply
+}) => {
+  try {
+    if (!isOwner) {
+      return await reply("*Only Owner 🚫*");
+    }
+    
+    // Check bot mode before allowing AI replay changes
+    if (config.MODE === "private") {
+      return reply("Bot private බැවින් ඔබට ai mod එක ක්‍රියාත්මක කිරීම සදහා bot public කිරීමට සිදු වේ");
+    }
+
+    if (config.AI_REPLAY == q) {
+      return reply("already on");
+    }
+    await input_set("AI_REPLAY", q);
+    return reply("*AI_REPLAY turned " + q + "*");
+  } catch (error) {
+    reply("*Error !!*");
+    l(error);
   }
 });
 

@@ -2,16 +2,27 @@ const { cmd } = require("../lib/command");
 const fs = require("fs");
 const path = require("path");
 const config = require("../settings");
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const axios = require("axios");
+const EventEmitter = require('events');
 
-// Add retry utility
-const retryOperation = async (operation, maxRetries = 3, delay = 1000) => {
+// Increase max listeners to prevent warnings
+EventEmitter.defaultMaxListeners = 100;
+
+// Add debug logging
+const debugLog = (msg, error = null) => {
+    console.log(`[DEBUG] ${msg}`);
+    if (error) console.error('[ERROR]', error);
+};
+
+// Add retry utility with better error handling
+const retryOperation = async (operation, maxRetries = 2) => {
     for (let i = 0; i < maxRetries; i++) {
         try {
             return await operation();
         } catch (error) {
+            debugLog(`Retry ${i + 1}/${maxRetries} failed`, error);
             if (i === maxRetries - 1) throw error;
-            await new Promise(resolve => setTimeout(resolve, delay));
+            await new Promise(resolve => setTimeout(resolve, 2000 * (i + 1))); // Exponential backoff
         }
     }
 };
@@ -128,7 +139,7 @@ cmd({
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
     if (config.AUTO_TYPING === 'true') {
-        await conn.sendPresenceUpdate('composing', from); // send typing 
+        await conn.sendPresenceUpdate('composing', from); 
     }
 });
 
@@ -144,52 +155,95 @@ cmd({
             }         
   });
 
-// AI reply section with retry logic
+// AI reply section
 cmd({
     on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
     if (config.AI_REPLAY === 'true' && body) {
         try {
-            await retryOperation(async () => {
-                const prompt = body;
-                const systemPromptPath = path.join(__dirname, '../lib/data/SYSTEM_PROMPT.json');
-                const systemPrompts = JSON.parse(fs.readFileSync(systemPromptPath, 'utf8'));
-                
-                const genAI = new GoogleGenerativeAI("AIzaSyDS65VY1zHbu2VPm0cnSAAK_eq4MAuER5E");
-                const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+            if (m.key.fromMe) return;
+            
+            if (m.key.id && (m.key.id.startsWith('BAE5') || m.key.id.startsWith('3EB0'))) return;
 
-                const result = await model.generateContent({
-                    contents: [{ role: "user", parts: [{ text: systemPrompts.default }, { text: prompt }]}]
-                });
+            const prompt = body;
+            const systemPromptPath = path.join(__dirname, '../lib/data/SYSTEM_PROMPT.json');
+            
+            if (!fs.existsSync(systemPromptPath)) {
+                throw new Error('System prompt file not found');
+            }
 
-                if (!conn.connected) {
-                    throw new Error('Connection lost');
+            const systemPrompts = JSON.parse(fs.readFileSync(systemPromptPath, 'utf8'));
+            
+            await conn.sendPresenceUpdate('composing', from);
+
+            const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
+                model: "mistralai/mixtral-8x7b-instruct",
+                messages: [
+                    {
+                        role: "system",
+                        content: systemPrompts.default
+                    },
+                    {
+                        role: "user",
+                        content: prompt
+                    }
+                ]
+            }, {
+                headers: {
+                    'Authorization': 'Bearer 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',
+                    'HTTP-Referer': 'https://github.com/Alexa-MD-new/Alexa-MD-new',
+                    'X-Title': 'MALAKA MD'
                 }
-
-                const response = result.response.text();
-                await m.reply(response);
             });
+
+            if (!response.data?.choices?.[0]?.message?.content) {
+                throw new Error('Empty response from AI');
+            }
+
+            const aiResponse = response.data.choices[0].message.content;
+            
+            await conn.sendPresenceUpdate('paused', from);
+            await m.reply(aiResponse);
+
         } catch (error) {
-            console.error('AI Error:', error);
-            if (error.message.includes('Connection')) {
-                await m.reply('Connection lost. Please try again in a moment.');
+            console.error('AI Error:', error?.response?.data || error);
+            
+            if (error?.response?.status === 429) {
+                await m.reply('🤖 API කෝටාව ඉක්මවා ඇත, කරුණාකර විනාඩි කිහිපයකින් නැවත උත්සාහ කරන්න.');
+            } else if (error?.response?.status === 401) {
+                await m.reply('⚠️ API යතුර වලංගු නැත, කරුණාකර පරිපාලක හා සම්බන්ධ වන්න.');
+            } else if (error.message?.includes('Connection')) {
+                await m.reply('🔌 සම්බන්ධතා දෝෂයකි, කරුණාකර මොහොතකින් නැවත උත්සාහ කරන්න.');
             } else {
-                await m.reply('sorry mata den mg karanna be');
+                await m.reply('❌ AI පද්ධතියේ දෝෂයකි, කරුණාකර පසුව උත්සාහ කරන්න.');
             }
         }
     }
 });
 
-// Add connection status check
+
 cmd({
     on: "connection.update"
 }, async (conn, update) => {
     const { connection, lastDisconnect } = update;
+    debugLog(`Connection state: ${connection}`);
+
     if (connection === 'close') {
         const shouldReconnect = lastDisconnect?.error?.output?.statusCode !== 428;
+        debugLog(`Disconnected, should reconnect: ${shouldReconnect}`);
+        
         if (shouldReconnect) {
-            await conn.connect();
+            try {
+                await conn.connect();
+                debugLog('Reconnected successfully');
+            } catch (error) {
+                debugLog('Reconnection failed', error);
+                
+                setTimeout(() => conn.connect(), 5000);
+            }
         }
+    } else if (connection === 'open') {
+        debugLog('Connection established');
     }
 });
