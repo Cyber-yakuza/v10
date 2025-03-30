@@ -36,7 +36,7 @@ cmd({
       sections: [buttonMenu]
     };
 
-    const buttonImage = { url:`https://i.ibb.co/Mkmvj2qP/5299.jpg` };
+    const buttonImage = { url:"https://i.ibb.co/Mkmvj2qP/5299.jpg" };
     const aliveButton = { displayText: "ALIVE" };
     const pingButton = { displayText: "PING" };
 
