@@ -169,7 +169,7 @@ function startNewsService(client, groupId) {
 
 async function getTikTokVideos() {
   try {
-    const searchTerms = ["Boot status sinhala", "Black lyrics  sinhala", "hint wadan srilanka", "romantick vido srilanka","sinhala status wadan", "sinhala joke videos", "Motivation video sinhala"];
+    const searchTerms = ["Boot status sinhala", "Black lyrics  sinhala","sri lanka trending video", "hint wadan srilanka", "romantick vido srilanka","sinhala status wadan", "sinhala joke videos", "Motivation video sinhala"];
     const randomTerm = searchTerms[Math.floor(Math.random() * searchTerms.length)];
     const response = await fetchJson(`https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=${encodeURIComponent(randomTerm)}`);
 
@@ -227,3 +227,4 @@ module.exports = {
   startTikTokService,
   startNewsService
 };
+
