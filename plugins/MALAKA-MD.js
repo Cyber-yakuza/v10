@@ -5,24 +5,35 @@ const config = require("../settings");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { DisconnectReason } = require("@whiskeysockets/baileys");
 
-// Improve connection check with status and timeout
-const checkConnection = (conn, maxRetries = 3, retryDelay = 1000) => {
-    return new Promise((resolve, reject) => {
-        let retries = 0;
-        
-        const check = () => {
+// Enhanced connection check with exponential backoff
+const checkConnection = async (conn, maxRetries = 5) => {
+    let retryCount = 0;
+    const maxBackoff = 8000; // Maximum backoff time in ms
+    
+    const checkWithRetry = async () => {
+        try {
             if (conn?.user && conn?.ws?.readyState === 1) {
-                resolve(true);
-            } else if (retries >= maxRetries) {
-                reject(new Error('Connection check failed after max retries'));
-            } else {
-                retries++;
-                setTimeout(check, retryDelay);
+                return true;
             }
-        };
-        
-        check();
-    });
+            
+            if (retryCount >= maxRetries) {
+                throw new Error(`Max retries (${maxRetries}) exceeded`);
+            }
+            
+            // Exponential backoff with jitter
+            const backoff = Math.min(1000 * Math.pow(2, retryCount), maxBackoff);
+            const jitter = Math.floor(Math.random() * 100);
+            await new Promise(resolve => setTimeout(resolve, backoff + jitter));
+            
+            retryCount++;
+            return await checkWithRetry();
+        } catch (error) {
+            console.error(`Connection check attempt ${retryCount} failed:`, error.message);
+            throw error;
+        }
+    };
+    
+    return await checkWithRetry();
 };
 
 //auto_voice
@@ -61,38 +72,34 @@ async (conn, mek, m, { from, body, isOwner }) => {
     }                
 });
 
-//ai reply section
+// AI reply section with improved handling
+const MAX_RETRIES = 3;
+const RETRY_DELAY = 2000;
+const MAX_RESPONSE_LENGTH = 4000;
+
 cmd({
     on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
     try {
-        
-        await checkConnection(conn).catch(error => {
-            throw new Error(`Connection check failed: ${error.message}`);
-        });
-        
         const aiConfig = require('../lib/data/prompts.js');
         const genAI = new GoogleGenerativeAI(aiConfig.GEMINI_API_KEY);
-        
         const triggerWord = body.split(' ')[0].toLowerCase();
         
-        if (aiConfig.AI_TRIGGERS[triggerWord]) {
+        if (!aiConfig.AI_TRIGGERS[triggerWord]) return;
+
+        let retries = 0;
+        const sendWithRetry = async () => {
             try {
-                
-                if (conn?.ws?.readyState !== 1) {
+                if (!conn?.ws?.readyState === 1) {
                     throw new Error('Connection not ready');
                 }
 
-                await conn.sendPresenceUpdate('composing', from)
-                    .catch(() => console.log('Failed to send presence update'));
+                await conn.sendPresenceUpdate('composing', from);
                 
                 const query = body.split(' ').slice(1).join(' ');
                 if (!query) return m.reply('කරුණාකර මට පණිවිඩයක් ලබා දෙන්න 🙏');
-                
-                
-                await checkConnection(conn, 2, 500);
-                
+
                 const model = genAI.getGenerativeModel({ 
                     model: "gemini-1.5-pro",
                     safetySettings: [
@@ -102,34 +109,52 @@ async (conn, mek, m, { from, body, isOwner }) => {
                         }
                     ]
                 });
-                
+
                 const chat = model.startChat({
-                    history: [{
-                        role: "user", 
-                        parts: aiConfig.SYSTEM_PROMPT
-                    }]
+                    history: [{ role: "user", parts: aiConfig.SYSTEM_PROMPT }]
                 });
-                
-                const result = await chat.sendMessage(query);
+
+                const result = await Promise.race([
+                    chat.sendMessage(query),
+                    new Promise((_, reject) => 
+                        setTimeout(() => reject(new Error('AI Timeout')), 30000)
+                    )
+                ]);
+
                 const response = result.response.text();
+
                 
-                
-                if (conn?.ws?.readyState === 1) {
-                    await m.reply(response)
-                        .catch(e => console.error('Reply failed:', e));
+                if (response.length > MAX_RESPONSE_LENGTH) {
+                    const chunks = response.match(new RegExp(`.{1,${MAX_RESPONSE_LENGTH}}`, 'g'));
+                    for (const chunk of chunks) {
+                        await m.reply(chunk);
+                        await new Promise(r => setTimeout(r, 500)); // Delay between chunks
+                    }
                 } else {
-                    throw new Error('Connection lost before sending response');
+                    await m.reply(response);
                 }
+
             } catch (error) {
-                console.error('AI Error:', error);
-                if (conn?.ws?.readyState === 1) {
-                    await m.reply('සම්බන්ධතා දෝෂයක්! කරුණාකර මොහොතකින් නැවත උත්සාහ කරන්න 🙏')
-                        .catch(() => null);
+                console.error(`Attempt ${retries + 1} failed:`, error);
+                
+                if (retries < MAX_RETRIES && 
+                    (error.message.includes('Connection') || error.message.includes('Timeout'))) {
+                    retries++;
+                    await new Promise(r => setTimeout(r, RETRY_DELAY));
+                    return sendWithRetry();
                 }
+                
+                throw error;
             }
-        }
+        };
+
+        await sendWithRetry().catch(error => {
+            console.error('ai eke error ekak bn', error);
+            m.reply('පද්ධති දෝෂයක්! කරුණාකර මොහොතකින් නැවත උත්සාහ කරන්න 🙏');
+        });
+
     } catch (error) {
-        console.error('Fatal error:', error);
+        console.error('AI command eke error ekak:', error);
     }
 });
 
