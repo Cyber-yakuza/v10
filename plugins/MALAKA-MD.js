@@ -181,7 +181,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
             await conn.sendPresenceUpdate('composing', from);
 
             const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
-                model: "openai/gpt-4o-mini-search-preview",
+                model: "deepseek/deepseek-v3-base:free",
                 messages: [
                     {
                         role: "system",
@@ -194,7 +194,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
                 ]
             }, {
                 headers: {
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer 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',
                     'HTTP-Referer': 'https://github.com/Alexa-MD-new/Alexa-MD-new',
                     'X-Title': 'MALAKA MD'
                 }
