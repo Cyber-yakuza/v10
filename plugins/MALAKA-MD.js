@@ -194,7 +194,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
                 ]
             }, {
                 headers: {
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer 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',
                     'Content-Type': 'application/json'
                 }
             });
