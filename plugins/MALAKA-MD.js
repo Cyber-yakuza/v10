@@ -155,29 +155,25 @@ cmd({
             }         
   });
 
-// AI reply section
+// Import the system prompt
+const { SYSTEM_PROMPT } = require('../lib/data/prompts');
+
+
 cmd({
     on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {
     if (config.AI_REPLAY === 'true' && body) {
         try {
-            // Check if message is from the bot itself
+            
             if (m.key.fromMe) return;
             
-            // Check if message is from another bot
+            
             if (m.key.id && (m.key.id.startsWith('BAE5') || m.key.id.startsWith('3EB0'))) return;
 
             const prompt = body;
-            const systemPromptPath = path.join(__dirname, '../lib/data/SYSTEM_PROMPT.json');
             
-            if (!fs.existsSync(systemPromptPath)) {
-                throw new Error('System prompt file not found');
-            }
-
-            const systemPrompts = JSON.parse(fs.readFileSync(systemPromptPath, 'utf8'));
             
-            // Show typing status
             await conn.sendPresenceUpdate('composing', from);
 
             const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
@@ -185,7 +181,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
                 messages: [
                     {
                         role: "system",
-                        content: systemPrompts.default
+                        content: SYSTEM_PROMPT
                     },
                     {
                         role: "user",
@@ -206,7 +202,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
 
             const aiResponse = response.data.choices[0].message.content;
             
-            // Clear typing status and send response
+            
             await conn.sendPresenceUpdate('paused', from);
             await m.reply(aiResponse);
 
@@ -226,7 +222,6 @@ async (conn, mek, m, { from, body, isOwner }) => {
     }
 });
 
-// Improved connection handler
 cmd({
     on: "connection.update"
 }, async (conn, update) => {
@@ -243,7 +238,7 @@ cmd({
                 debugLog('Reconnected successfully');
             } catch (error) {
                 debugLog('Reconnection failed', error);
-                // Wait before next retry
+                
                 setTimeout(() => conn.connect(), 5000);
             }
         }
