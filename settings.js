@@ -8,7 +8,7 @@ module.exports = {
 SESSION_ID: process.env.SESSION_ID === undefined ? 'v6pUTbwC#Lffy41nDdI_CgPVDavOxb6LgduNZB6ClzrSU3rQcu50' : process.env.SESSION_ID,
 PREFIX: process.env.PREFIX || '.' ,
 AUTO_READ_STATUS: process.env.AUTO_READ_STATUS === undefined ?"true" : process.env.AUTO_READ_STATUS,
-MODE: process.env.MODE === undefined ?"public" : process.env.MODE,
+MODE: process.env.MODE === undefined ?"privet" : process.env.MODE,
 AUTO_VOICE: process.env.AUTO_VOICE === undefined ? "false" : process.env.AUTO_VOICE,
 AUTO_REPLY: process.env.AUTO_REPLY === undefined ? "false" : process.env.AUTO_REPLY,
 AI_REPLAY: process.env.AI_REPLAY === undefined ? "true" : process.env.AI_REPLAY,//AI_REPLAY KARANA KOTASA ADD KARA
