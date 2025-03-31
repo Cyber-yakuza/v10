@@ -181,7 +181,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
             await conn.sendPresenceUpdate('composing', from);
 
             const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
-                model: "openai/chatgpt-4o-latest",
+                model: "openai/gpt-4o-mini-search-preview",
                 messages: [
                     {
                         role: "system",
