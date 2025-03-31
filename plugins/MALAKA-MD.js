@@ -162,8 +162,10 @@ cmd({
 async (conn, mek, m, { from, body, isOwner }) => {
     if (config.AI_REPLAY === 'true' && body) {
         try {
+            // Check if message is from the bot itself
             if (m.key.fromMe) return;
             
+            // Check if message is from another bot
             if (m.key.id && (m.key.id.startsWith('BAE5') || m.key.id.startsWith('3EB0'))) return;
 
             const prompt = body;
@@ -175,10 +177,11 @@ async (conn, mek, m, { from, body, isOwner }) => {
 
             const systemPrompts = JSON.parse(fs.readFileSync(systemPromptPath, 'utf8'));
             
+            // Show typing status
             await conn.sendPresenceUpdate('composing', from);
 
-            const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
-                model: "mistralai/mixtral-8x7b-instruct",
+            const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+                model: "gpt-3.5-turbo",
                 messages: [
                     {
                         role: "system",
@@ -191,9 +194,8 @@ async (conn, mek, m, { from, body, isOwner }) => {
                 ]
             }, {
                 headers: {
-                    'Authorization': 'Bearer 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',
-                    'HTTP-Referer': 'https://github.com/Alexa-MD-new/Alexa-MD-new',
-                    'X-Title': 'MALAKA MD'
+                    'Authorization': 'Bearer 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',
+                    'Content-Type': 'application/json'
                 }
             });
 
@@ -203,6 +205,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
 
             const aiResponse = response.data.choices[0].message.content;
             
+            // Clear typing status and send response
             await conn.sendPresenceUpdate('paused', from);
             await m.reply(aiResponse);
 
@@ -222,7 +225,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
     }
 });
 
-
+// Improved connection handler
 cmd({
     on: "connection.update"
 }, async (conn, update) => {
@@ -239,7 +242,7 @@ cmd({
                 debugLog('Reconnected successfully');
             } catch (error) {
                 debugLog('Reconnection failed', error);
-                
+                // Wait before next retry
                 setTimeout(() => conn.connect(), 5000);
             }
         }
