@@ -14,7 +14,7 @@ cmd({
 }, async (conn, mek, m, { from, prefix, q, reply }) => {
     try {
 
-        let teksnya = `hh`;
+        let teksnya = `kaveesha`;
 
     const buttonMenu = {
       title: "🔑 Select menu type",
