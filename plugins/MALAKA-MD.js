@@ -180,8 +180,8 @@ async (conn, mek, m, { from, body, isOwner }) => {
             // Show typing status
             await conn.sendPresenceUpdate('composing', from);
 
-            const response = await axios.post('https://api.openai.com/v1/chat/completions', {
-                model: "gpt-3.5-turbo",
+            const response = await axios.post('https://openrouter.ai/api/v1/chat/completions', {
+                model: "openai/chatgpt-4o-latest",
                 messages: [
                     {
                         role: "system",
@@ -194,8 +194,9 @@ async (conn, mek, m, { from, body, isOwner }) => {
                 ]
             }, {
                 headers: {
-                    'Authorization': 'Bearer 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',
-                    'Content-Type': 'application/json'
+                    'Authorization': 'Bearer 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',
+                    'HTTP-Referer': 'https://github.com/Alexa-MD-new/Alexa-MD-new',
+                    'X-Title': 'MALAKA MD'
                 }
             });
 
