@@ -1625,7 +1625,7 @@ if (!isAdmins) return reply(ADMIN)
                 reply(`Close time ${q} starting from now`)
                 setTimeout(() => {
                     var nomor = m.participant
-                    const close = `*CLOSE TIME* GROUP CLOSED BY SUPUN-MD AT APPROVED ADMIN\nNOW ONLY ADMIN CAN SEND MESSAGES 🔐`
+                    const close = `*CLOSE TIME* GROUP CLOSED BY DARK NERO MD  AT APPROVED ADMIN\nNOW ONLY ADMIN CAN SEND MESSAGES 🔐`
                     conn.groupSettingUpdate(from, 'announcement')
                     reply(close)
                 }, timer)
